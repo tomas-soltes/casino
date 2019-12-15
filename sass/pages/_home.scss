@@ -1,0 +1,272 @@
+.header.logged_in {
+  background-image: url("../img/background.gif");
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 82vh;
+
+  .header__text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    text-align: right;
+    z-index: 3;
+
+    h1 {
+      background-color: transparent;
+      text-align: right;
+      padding: 0;
+
+      p:nth-child(1) {
+        font-size: 70px;
+        font-weight: 600;
+      }
+
+      p:nth-child(2) {
+        font-size: 90px;
+        font-weight: 700;
+      }
+
+      p:nth-child(3) {
+        font-size: 50px;
+        opacity: 0.7;
+      }
+    }
+
+    button {
+      font-size: 30px;
+      border-radius: 15px;
+      padding: 3% 8%;
+      margin: 8% 0 0 0;
+      z-index: 999;
+    }
+  }
+}
+
+.onboarding_flow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.onboarding {
+  overflow: hidden;
+
+  .onboarding_flow {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 20;
+    transition: all .3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+
+
+    &__hint {
+      position: absolute;
+      background-color: rgb(245, 245, 245);
+      padding: 2%;
+      width: 20%;
+      border-radius: 12px;
+      transition: all .3s ease-in-out;
+
+      p {
+        font-size: 16px;
+        color: var(--background-color);
+      }
+
+      &--myAccount {
+        top: 12%;
+        right: 7%;
+      }
+
+      &--myBalance {
+        top: 12%;
+        right: 17%;
+      }
+
+      &--playNow {
+        top: 37%;
+        right: 8%;
+      }
+
+      &__box {
+        .tip {
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          background: transparent;
+          border: 25px solid rgb(245, 245, 245);
+        }
+
+        .tip-up {
+          top: -45px;
+          /* Same as body margin top + border */
+          right: 40px;
+          border-right-color: transparent;
+          border-left-color: transparent;
+          border-top-color: transparent;
+        }
+
+        .tip-down {
+          bottom: -45px;
+          right: 40px;
+          border-right-color: transparent;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+
+
+    &__box {
+      background-color: var(--gray);
+      width: 100vw;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 3% 6%;
+
+      &--steps {
+        float: left;
+        width: 80%;
+
+        li {
+          float: left;
+          font-size: 22px;
+          font-weight: 600;
+          padding: 2% 5%;
+          list-style: none;
+          opacity: .5;
+        }
+      }
+
+      button {
+        padding: 1% 4%;
+        font-size: 35px;
+        float: right;
+      }
+
+    }
+  }
+
+  .nav {
+
+    &__logo,
+    &__menu {
+      opacity: .4;
+    }
+
+    &__account {
+
+      .addMoney,
+      .myAccount {
+        opacity: .4;
+      }
+    }
+  }
+
+  .header.logged_in {
+    .filter {
+      background-color: rgba(0, 0, 0, 0.699);
+      z-index: 2;
+    }
+
+    .header__text {
+
+      h1 {
+        opacity: .3;
+      }
+
+      button {
+        opacity: .3;
+      }
+    }
+  }
+
+
+  .onboarding_flow {
+    &__hint {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &--myAccount {
+    .nav {
+      &__account {
+        .myAccount {
+          opacity: 1;
+        }
+      }
+    }
+
+    .onboarding_flow {
+      &__hint--myAccount {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &__box {
+        &--steps {
+          li:nth-child(1) {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &--myBalance {
+    .nav {
+      &__account {
+        .addMoney {
+          opacity: 1;
+        }
+      }
+    }
+
+    .onboarding_flow {
+      &__hint--myBalance {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &__box {
+        &--steps {
+          li:nth-child(2) {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &--playNow {
+    .onboarding_flow {
+      &__hint--playNow {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &__box {
+        &--steps {
+          li:nth-child(3) {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .header.logged_in {
+      .header__text {
+        button {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

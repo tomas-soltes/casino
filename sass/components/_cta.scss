@@ -1,0 +1,29 @@
+.cta_btn {
+    display: grid;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 2.5rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+    /* box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.18); */
+}
+
+.cta_btn:hover {
+    transform: scale(1.1);
+    color: rgb(243, 243, 243);
+}
+
+@include tablet {
+    .cta_btn {
+        padding: .8rem 2.8rem;
+        font-size: 1.4rem;
+    }
+}

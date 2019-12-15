@@ -1,0 +1,588 @@
+.addMoney_box {
+    background-color: var(--primary-color);
+    padding: 3% 15%;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    grid-column-gap: 5%;
+
+    &__title {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        align-content: center;
+
+        p {
+            margin: auto 10%;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    }
+
+    &__money {
+        margin: auto 10%;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    button {
+        border-radius: 10px;
+        padding: 8% 15%;
+        margin: auto;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--primary-color);
+        background-color: var(--font-color);
+    }
+}
+
+.editDetails {
+    padding: 3% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--font-color);
+
+    &__personal {
+        padding: 5%;
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 23px;
+        }
+
+        form {
+            padding: 5%;
+
+            label {
+                color: black;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            input {
+                padding: 2%;
+                margin: 2% 0 5% 0;
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+            input[type=submit] {
+                width: auto;
+                padding: 2% 5%;
+                font-size: 16px;
+            }
+
+        }
+    }
+
+    &__logout {
+        display: grid;
+        align-content: center;
+        justify-items: center;
+
+        button {
+            padding: 3% 7%;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: var(--primary-color);
+            color: var(--font-color);
+            margin: auto;
+        }
+    }
+
+}
+
+
+
+.addMoneyModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 20;
+    transition: all .2s ease;
+    color: var(--dark-gray);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10;
+
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        transition: opacity .5s ease-in-out;
+        transform: translate(-50%, -50%);
+        background-color: var(--font-color);
+        padding: 4%;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1),
+            0 4px 6px -2px rgba(0, 0, 0, .05);
+
+        .thankYouBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 20;
+
+            h2 {
+                padding: 0 0 9% 0;
+                font-size: 60px;
+            }
+
+            img {
+                width: 20%;
+            }
+        }
+
+        .forms_box {
+            width: 100%;
+            height: 40vh;
+            position: relative;
+        }
+
+        .goBack {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-30%);
+            left: 0;
+            margin: auto 10%;
+            font-size: 18px;
+            color: gray;
+        }
+
+        .goBack:hover {
+            color: var(--primary-color);
+        }
+
+        .step_box_1,
+        .step_box_2,
+        .step_box_3 {
+            padding: 5%;
+            position: absolute;
+            height: 40vh;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: all .5s ease-in-out;
+
+
+            .step_box_form {
+                text-align: left;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 25vh;
+                z-index: 3;
+            }
+
+            .step_box_button {
+                position: absolute;
+                bottom: 0vh;
+                left: 0;
+                width: 100%;
+                height: 15vh;
+            }
+
+            form {
+                position: relative;
+                width: 100%;
+                margin: 2rem 0;
+                box-sizing: border-box;
+            }
+
+            .address-grid {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-gap: 1.5em;
+            }
+
+            label {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #6A6A6A;
+            }
+
+            input {
+                margin: 1% 0 5% 0;
+            }
+
+            button {
+                margin: 7% auto 0 auto;
+            }
+
+            .textarea {
+                max-height: 80%;
+                overflow: scroll;
+                display: block;
+                width: 100%;
+                margin: 0 0 2em;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+                box-sizing: border-box;
+                padding: 5% 10%;
+                font-size: 16px;
+
+                b {
+                    color: black;
+                }
+            }
+
+
+            .formCheck {
+                display: block;
+                margin: 0 auto;
+                width: auto;
+                justify-content: center;
+                display: flex;
+
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+
+                p {
+                    color: var(--dark-gray);
+                    font-size: 1.2rem;
+                }
+
+                &__checkbox {
+                    position: relative;
+                    margin-right: 30px;
+
+                    // circle
+                    label {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 2.3rem;
+                        height: 2.3rem;
+                        background-color: rgb(255, 255, 255);
+                        border: 1px solid rgb(192, 192, 192);
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition:
+                            background-color 300ms ease,
+                            colour 300ms ease;
+
+                        // tick
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 38%;
+                            left: 33%;
+                            width: 39%;
+                            height: 24%;
+                            opacity: 0;
+                            border-left: 2px solid white;
+                            border-bottom: 2px solid white;
+                            transform: rotate(-45deg);
+                            transition: opacity 300ms ease;
+                        }
+                    }
+
+                    input {
+                        opacity: 0;
+                        position: absolute;
+                        right: -25px;
+                        top: 10px;
+
+                        // selected state bg
+                        &:checked+label {
+                            background-color: var(--primary-color);
+                            border-color: var(--primary-color);
+
+                            // selected state tick
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .step_box_1 {
+            visibility: visible;
+            opacity: 1;
+
+            input {
+                position: absolute;
+                display: block;
+                opacity: 0;
+                /*  opacity: 1;
+                visibility: visible; */
+            }
+
+            .step_box_button {
+                z-index: 5;
+            }
+
+            .step_box_form {
+                padding: 5% 0 0 0;
+            }
+        }
+
+        .step_box_2,
+        .step_box_3 {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .step_box_2 {
+            padding: 5% 15%;
+
+            .step_box_form {
+                padding: 0 25%;
+
+                label {
+                    font-size: 17px;
+                }
+
+                input {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__steps {
+            text-align: center;
+
+            &--illustration {
+                display: inline-block;
+                position: relative;
+                margin: 7% auto 4% auto;
+                width: 50%;
+
+
+                .dot {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: var(--really-light-gray);
+                    z-index: 2;
+
+                    &--1 {
+                        left: 0;
+                        background-color: var(--primary-color);
+                    }
+
+                    &--2 {
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &--3 {
+                        right: 0;
+                    }
+                }
+
+                .line {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 50%;
+                    transform: translateY(-50%);
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: var(--really-light-gray);
+
+                    &--right {
+                        left: 50%;
+                    }
+                }
+            }
+
+            &--text {
+                margin: 0 auto 7% auto;
+                width: 70%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                p {
+                    color: var(--really-light-gray);
+                    text-align: center;
+                }
+
+                p.step--1 {
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+        h1 {
+            text-align: left;
+            color: var(--primary-color);
+            font-size: 30px;
+            padding: 0 4% 2% 4%;
+            transition: opacity .5s ease-in-out;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 5%;
+
+            input {
+                display: none;
+            }
+
+            input[type=radio]:checked+label {
+                background-color: var(--primary-color);
+
+                span {
+                    color: var(--font-color);
+                }
+            }
+
+            label {
+                background-color: rgb(240, 240, 240);
+                border-radius: 10px;
+                padding: 30% 0;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 35px;
+                    font-weight: 600;
+                    color: rgb(172, 172, 172);
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &--another {
+                text-align: center;
+                padding: 4%;
+                text-decoration: underline;
+                cursor: pointer;
+                color: var(--really-light-gray);
+            }
+        }
+
+        button {
+            margin-top: 4%;
+            font-size: 25px;
+            padding: 2% 10%;
+            border-radius: 6px;
+        }
+    }
+
+    .step2 {
+
+        .step_box_1 {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .step_box_2 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .dot {
+            &--2 {
+                background-color: var(--primary-color);
+            }
+        }
+
+        .line {
+            &--left {
+                background-color: var(--primary-color);
+            }
+        }
+
+        p.step--2 {
+            color: var(--primary-color);
+        }
+    }
+
+    .step3 {
+        .step_box_1 {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .step_box_2 {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+
+        .step_box_3 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .dot {
+
+            &--2,
+            &--3 {
+                background-color: var(--primary-color);
+            }
+        }
+
+        .line {
+
+            &--left,
+            &--right {
+                background-color: var(--primary-color);
+            }
+        }
+
+        p.step--2,
+        p.step--3 {
+            color: var(--primary-color);
+        }
+    }
+
+    .step4 {
+        background-color: var(--primary-color);
+        color: var(--font-color);
+
+        .step_box_3 {
+           display: none;
+        }
+
+        h1,
+        .addMoneyModal__box__steps {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(99999px);
+        }
+
+        .thankYouBox {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+@keyframes goLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        display: none;
+    }
+}

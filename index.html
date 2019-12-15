@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.typekit.net/zry0qym.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/etw4fag.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Casino 777 - Games</title>
+</head>
+
+<body class="onboarding--myAccount">
+    <nav class="nav logged_in myAccountFilter">
+        <div class="nav__logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" onmouseover="this.src='img/logo-blue.png'"
+                    onmouseout="this.src='img/logo.png'" /></a>
+        </div>
+        <!-- <h1>Name</h1> -->
+        <ul class="nav__menu">
+            <a href="index.html">
+                <li>Games</li>
+            </a>
+            <a href="index.html">
+                <li>Casino</li>
+            </a>
+            <a>
+                <li>Promotions</li>
+            </a>
+            <a>
+                <li>Vip</li>
+            </a>
+            <a>
+                <li>About</li>
+            </a>
+        </ul>
+
+        <div class="nav__account">
+            <a onclick="addMoney()" class="addMoney"><img src="img/icons/moeny.png" alt="icon">
+                <p>0$</p>
+            </a>
+            <a href="account.html" class="myAccount"><img src="img/icons/account.png" alt="icon">
+                <p>My Account</p>
+            </a>
+
+        </div>
+        <!--  <button class="log-out">Log out</button> -->
+    </nav>
+    <main>
+        <section class="header logged_in">
+            <div class="filter"></div>
+            <div class="header__text">
+                <h1>
+                    <p>WELCOME BONUS</p>
+                    <p>UP TO $100</p>
+                    <p>FOR NEW USERS</p>
+                </h1>
+                <button class="playRoulette">PLAY NOW</button>
+            </div>
+        </section>
+
+        <section class="games_showcase">
+            <div class="games_showcase__navigation">
+                <ul>
+                    <li>Featured</li>
+                    <li>Slots</li>
+                    <li>Tables</li>
+                    <li>Live Casino</li>
+                    <li>Video Poker</li>
+                    <li>Others</li>
+                </ul>
+            </div>
+            <div class="games_showcase__games">
+                <img src="img/games/1.png" alt="game" />
+                <img src="img/games/2.png" alt="game" />
+                <img src="img/games/3.png" alt="game" />
+                <img src="img/games/4.png" alt="game" />
+                <img src="img/games/5.png" alt="game" />
+                <img src="img/games/6.png" alt="game" />
+                <img src="img/games/7.png" alt="game" />
+                <img src="img/games/8.png" alt="game" />
+
+                <img src="img/games/1.png" alt="game" />
+                <img src="img/games/2.png" alt="game" />
+                <img src="img/games/3.png" alt="game" />
+                <img src="img/games/4.png" alt="game" />
+                <img src="img/games/5.png" alt="game" />
+                <img src="img/games/6.png" alt="game" />
+                <img src="img/games/7.png" alt="game" />
+                <img src="img/games/8.png" alt="game" />
+
+                <!-- <img src="img/games/9.png" alt="game">
+                <img src="img/games/10.png" alt="game">
+                <img src="img/games/11.png" alt="game">
+                <img src="img/games/12.png" alt="game">
+                <img src="img/games/13.png" alt="game">
+                <img src="img/games/14.png" alt="game">
+                <img src="img/games/15.png" alt="game">
+                <img src="img/games/16.png" alt="game"> -->
+            </div>
+        </section>
+
+        <section class="jackpot">
+            <div class="jackpot__text">
+                <h2>PROGRESSIVE JACKPOT</h2>
+                <h1>$7,136,914.04</h1>
+            </div>
+        </section>
+    </main>
+
+    <section class="onboarding_flow">
+        <div class="onboarding_flow__hint onboarding_flow__hint--myAccount active">
+            <div class="onboarding_flow__hint__box">
+                <span class="tip tip-up"></span>
+                <div class="message">
+                    <p>Under My Account you can see and edit your personal information, add balance and update your
+                        payment methods.</p>
+                </div>
+            </div>
+        </div>
+        <div class="onboarding_flow__hint onboarding_flow__hint--myBalance">
+            <div class="onboarding_flow__hint__box">
+                <span class="tip tip-up"></span>
+                <div class="message">
+                    <p>Here is the quick overview of your current available balance. Click on the icon to add more
+                        funds.</p>
+                </div>
+            </div>
+        </div>
+        <div class="onboarding_flow__hint onboarding_flow__hint--playNow">
+            <div class="onboarding_flow__hint__box">
+                <span class="tip tip-down"></span>
+                <div class="message">
+                    <p>Start off by playing your first game of Roulette with incredible prizes. Simply press on Play Now
+                        to continue.</p>
+                </div>
+            </div>
+        </div>
+        <div class="onboarding_flow__box">
+            <div class="onboarding_flow__box--steps">
+                <li id="myAccount">1. My account</li>
+                <li id="myBalance">2. My balance</li>
+                <li id="playNow">4. Play now</li>
+            </div>
+            <button id="nextButton">Next</button>
+        </div>
+    </section>
+
+    <section class="addMoneyModal">
+        <div onclick="closeAddMoneyModal()" class="filter filter__addMoney"></div>
+        <div class="addMoneyModal__box">
+            <h1>Add Money</h1>
+            <div class="addMoneyModal__box__steps">
+                <div class="addMoneyModal__box__steps--illustration">
+                    <div class="dot dot--1"></div>
+                    <div class="dot dot--2"></div>
+                    <div class="dot dot--3"></div>
+                    <div class="line line--left"></div>
+                    <div class="line line--right"></div>
+                </div>
+                <div class="addMoneyModal__box__steps--text">
+                    <p class="step--1">Adding Balance</p>
+                    <p class="step--2">Card details</p>
+                    <p class="step--3">Contract</p>
+                </div>
+            </div>
+            <div class="forms_box">
+                <form class="step_box_1">
+                    <div class="step_box_form">
+                        <div class="addMoneyModal__box__cards">
+                            <input type="radio" id="50" name="addBalance" required>
+                            <label for="50" class="addMoneyModal__box__cards--card" value="50"><span>50$</span></label>
+                            <input type="radio" id="300" name="addBalance" required>
+                            <label for="300" class="addMoneyModal__box__cards--card" value="300">
+                                <span>300$</span></label>
+                            <input type="radio" id="500" name="addBalance" required>
+                            <label for="500" class="addMoneyModal__box__cards--card" value="500"> <span>500$</span>
+                            </label>
+                        </div>
+                        <p class="addMoneyModal__box__cards--another">Choose another amount</p>
+                    </div>
+                    <div class="step_box_button">
+                        <button onclick="goToStep2()" type="button" class="addMoneyModal__box__button step_box_button_1"
+                            disabled>Next
+                            step</button></div>
+                </form>
+                <form class="step_box_2" onsubmit="goToStep3(); return false">
+                    <div class="step_box_form">
+                        <label>Name on Card</label>
+                        <input id="card_name" value="" type="text" name="name" pattern="[a-zA-ZæøåÆØÅ\s\-]+" />
+
+                        <label>Card number</label>
+                        <input value="4309069094822124" id="cardNumber" name="cardNumber" pattern="[0-9]{16}"
+                            maxlength="16" type="tel" required />
+
+                        <div class="address-grid">
+                            <div class="address-zip">
+                                <label for="exp">Expiry date</label>
+                                <input value="12/20" class="exp" onkeyup="addSlash()" id="exp" type="tel" name="exp"
+                                    maxlength="5" required />
+                            </div>
+                            <div class="address-city">
+                                <label for="cvv">CVV</label>
+                                <input value="250" id="cvv" type="tel" name="cvv" maxlength="3" pattern="[0-9]{3}"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="step_box_button">
+                        <a class="goBack" onclick="goBackToStep1()">Back</a>
+                        <button class="addMoneyModal__box__button step_box_button_2" type="submit">Next
+                            step</button>
+                    </div>
+                </form>
+                <form class="step_box_3" onsubmit="finishBalance(); return false">
+                    <div class="step_box_form">
+                        <p class="textarea">
+                            <b>CORPORATE END USER LICENSE AGREEMENT</b><br>
+                            <br>
+                            Terms and Conditions for Casino 777
+                            Introduction
+                            These Website Standard Terms and Conditions written on this webpage shall manage your use of
+                            our
+                            website, Casino777 accessible at Casino777.com.
+                            <br>
+                            These Terms will be applied fully and affect to your use of this Website. By using this
+                            Website,
+                            you agreed to accept all terms and conditions written in here. You must not use this Website
+                            if
+                            you disagree with any of these Website Standard Terms and Conditions.
+                            <br>
+                            Minors or people below 18 years old are not allowed to use this Website.
+                            <br>
+                            Intellectual Property Rights
+                            Other than the content you own, under these Terms, Company Name and/or its licensors own all
+                            the
+                            intellectual property rights and materials contained in this Website.
+                            <br>
+                            You are granted limited license only for purposes of viewing the material contained on this
+                            Website.
+                            <br>
+                            Restrictions
+                            You are specifically restricted from all of the following:
+                            <br>
+                            publishing any Website material in any other media;
+                            selling, sublicensing and/or otherwise commercializing any Website material;
+                            publicly performing and/or showing any Website material;
+                            using this Website in any way that is or may be damaging to this Website;
+                            using this Website in any way that impacts user access to this Website;
+                            using this Website contrary to applicable laws and regulations, or in any way may cause harm
+                            to
+                            the Website, or to any person or business entity;
+                            engaging in any data mining, data harvesting, data extracting or any other similar activity
+                            in
+                            relation to this Website;
+                            using this Website to engage in any advertising or marketing.
+                            Certain areas of this Website are restricted from being access by you and Company Name may
+                            further restrict access by you to any areas of this Website, at any time, in absolute
+                            discretion. Any user ID and password you may have for this Website are confidential and you
+                            must
+                            maintain confidentiality as well.
+                            <br>
+                            Your Content
+                            In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video
+                            text,
+                            images or other material you choose to display on this Website. By displaying Your Content,
+                            you
+                            grant Company Name a non-exclusive, worldwide irrevocable, sub licensable license to use,
+                            reproduce, adapt, publish, translate and distribute it in any and all media.
+                            <br>
+                            Your Content must be your own and must not be invading any third-party's rights. Company
+                            Name
+                            reserves the right to remove any of Your Content from this Website at any time without
+                            notice.
+                            <br>
+                            No warranties
+                            This Website is provided “as is,” with all faults, and Company Name express no
+                            representations
+                            or warranties, of any kind related to this Website or the materials contained on this
+                            Website.
+                            Also, nothing contained on this Website shall be interpreted as advising you.
+                            <br>
+                            Limitation of liability
+                            In no event shall Company Name, nor any of its officers, directors and employees, shall be
+                            held
+                            liable for anything arising out of or in any way connected with your use of this Website
+                            whether
+                            such liability is under contract. Company Name, including its officers, directors and
+                            employees
+                            shall not be held liable for any indirect, consequential or special liability arising out of
+                            or
+                            in any way related to your use of this Website.
+                            <br>
+                            Indemnification
+                            You hereby indemnify to the fullest extent Company Name from and against any and/or all
+                            liabilities, costs, demands, causes of action, damages and expenses arising in any way
+                            related
+                            to your breach of any of the provisions of these Terms.
+                            <br>
+                            Severability
+                            If any provision of these Terms is found to be invalid under any applicable law, such
+                            provisions
+                            shall be deleted without affecting the remaining provisions herein.
+                            <br>
+                            Variation of Terms
+                            Company Name is permitted to revise these Terms at any time as it sees fit, and by using
+                            this
+                            Website you are expected to review these Terms on a regular basis.
+                            <br>
+                            Assignment
+                            The Company Name is allowed to assign, transfer, and subcontract its rights and/or
+                            obligations
+                            under these Terms without any notification. However, you are not allowed to assign,
+                            transfer, or
+                            subcontract any of your rights and/or obligations under these Terms.
+                            <br>
+                            Entire Agreement
+                            These Terms constitute the entire agreement between Company Name and you in relation to your
+                            use
+                            of this Website, and supersede all prior agreements and understandings.
+                            <br>
+                            Governing Law & Jurisdiction
+                            These Terms will be governed by and interpreted in accordance with the laws of the State of
+                            Country, and you submit to the non-exclusive jurisdiction of the state and federal courts
+                            located in Country for the resolution of any disputes.
+
+                        </p>
+                        <div class="formCheck">
+                            <div class="formCheck__checkbox">
+                                <input type="checkbox" id="adult" required>
+                                <label for="adult">
+                                </label>
+                            </div>
+                            <p>I am over 18, and accept the <u>Terms</u> and <u>Privacy policy</u></p>
+                        </div>
+                    </div>
+                    <div class="step_box_button">
+                        <a class="goBack" onclick="goBackToStep2()">Back</a>
+                        <button class="addMoneyModal__box__button step_box_button_3" type="submit"
+                            disabled>Finish</button> </div>
+                </form>
+                </form>
+                <div class="thankYouBox">
+                    <h2>You've added 300$</h2>
+                    <img src="img/icons/checkmark@400x.png" alt="checkmark">
+                </div>
+            </div>
+            <div onclick="closeAddMoneyModal()" class="close"></div>
+        </div>
+    </section>
+
+    <section class="loading">
+        <div class="loader"></div>
+    </section>
+
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="footer__top__social">
+                <img src="img/icons/social/facebook.png" alt="icon" />
+                <img src="img/icons/social/instagram.png" alt="icon" />
+                <img src="img/icons/social/twitter.png" alt="icon" />
+            </div>
+            <div class="footer__top__payment">
+                <img src="img/icons/payment/1.png" alt="icon" />
+                <img src="img/icons/payment/2.png" alt="icon" />
+                <img src="img/icons/payment/3.png" alt="icon" />
+                <img src="img/icons/payment/4.png" alt="icon" />
+                <img src="img/icons/payment/5.png" alt="icon" />
+                <img src="img/icons/payment/6.png" alt="icon" />
+            </div>
+        </section>
+        <section class="footer__main">
+            <div class="footer__main__logo">
+                <a href="#home"><img src="img/logo.png" alt="Logo" /></a>
+            </div>
+            <div class="footer__main__menu">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li>Games</li>
+                    <li>Casino</li>
+                    <li>Live Casino</li>
+                    <li>Promotions</li>
+                    <li>Vip</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div class="footer__main__menu">
+                <h3>Games</h3>
+                <ul>
+                    <li>Featured</li>
+                    <li>Slots</li>
+                    <li>Tables</li>
+                    <li>Live Casino</li>
+                    <li>Video Poker</li>
+                    <li>Others</li>
+                </ul>
+            </div>
+            <div class="footer__main__menu">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </div>
+            <div class="footer__main__menu">
+                <h3>Help</h3>
+                <ul>
+                    <li>Support Center</li>
+                    <li>FAQ</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+        </section>
+        <section class="footer__copyright">
+            <p>© 2019, 777 Casino</p>
+        </section>
+    </footer>
+</body>
+
+<script src="scripts/dashboard.js"></script>
+<script src="scripts/addMoney.js"></script>
+
+</html>

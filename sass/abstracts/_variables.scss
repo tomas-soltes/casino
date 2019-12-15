@@ -1,0 +1,44 @@
+//COLORS
+:root {
+  --primary-color: #CA974A;
+  --primary-color-opacity: rgba(202, 151, 74, 0.89);
+  --secondary-color: #4a4a4a;
+  --hamburger-menu-color: #f74949;
+  --background-color: #222222;
+  --font-color: #fff;
+  --color-black: #1f1f1f;
+  --dark-gray: #181818;
+  --gray: #303030;
+  --light-gray: #333333;
+  --really-light-gray: #b1b1b1;
+
+  //FONT
+  --default-font-size: 1.6rem;
+
+}
+
+
+@mixin desktop {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+
+
+@mixin mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}

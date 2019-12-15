@@ -1,0 +1,126 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    padding: 1% 3%;
+    box-sizing: border-box;
+    font-size: 17px;
+    background-color: var(--background-color);
+    z-index: 10;
+
+    &.landing {
+        grid-template-columns: 10% 50%;
+        grid-column-gap: 40%;
+    }
+
+    &.logged_in {
+        grid-template-columns: 10% 59% 25%;
+        grid-column-gap: 3%;
+    }
+
+    a {
+
+        text-decoration: none;
+        margin-right: 15px;
+        transition: all .3s linear;
+    }
+
+    a:hover {}
+
+    &__logo {
+        width: 130px;
+        bottom: 18%;
+        left: 5%;
+    }
+
+
+    &__login {
+        form>* {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 4fr 4fr 2.5fr 2.5fr;
+            grid-column-gap: 3%;
+
+            input {
+                font-size: 16px;
+                color: var(--font-color);
+            }
+        }
+
+        #email-login,
+        #password-login {
+            background-color: transparent;
+
+        }
+
+        #submit-login {
+            background-color: var(--font-color);
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        #submit-register {
+            background-color: var(--primary-color);
+            font-weight: 400;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        a{
+            padding: 3%;   
+        }
+        li {
+            text-align: center;
+            padding: 3%;
+            font-family: 'Droid-serif', serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+    }
+
+    &__account {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+
+
+        a {
+            background-color: transparent;
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            align-content: center;
+
+            p {
+                padding: 2% 0 2% 8%;
+                color: var(--font-color);
+                font-weight: 600;
+                font-size: 18px;
+                margin: auto 0;
+                transition: all .3s ease;
+            }
+        }
+
+        a:hover {
+            p {
+                color: var(--primary-color);
+            }
+        }
+
+        .addMoney {
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+}
