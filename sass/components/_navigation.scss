@@ -14,33 +14,92 @@
     &.landing {
         grid-template-columns: 10% 50%;
         grid-column-gap: 40%;
+
+        @include tablet {
+            padding: 1% 7%;
+            grid-template-columns: 30% 65%;
+            grid-column-gap: 5%;
+            justify-items: end;
+            align-items: center;
+        }
+    }
+
+    &.open {
+        .nav__mobile {
+            &--hamburger {
+                span {
+                    &:before {
+                        transform: rotateZ(135deg) scaleX(1.25) translate(0.6rem, -0.8rem);
+                        background-color: white;
+                    }
+
+                    &:after {
+                        transform: rotateZ(-135deg) scaleX(1.25) translate(0.7rem, 1rem);
+                        background-color: white;
+                    }
+                }
+            }
+        }
+
+        .nav__menu {
+            transform: translateX(0);
+            visibility: visible;
+        }
     }
 
     &.logged_in {
         grid-template-columns: 10% 59% 25%;
         grid-column-gap: 3%;
+
+        @include tablet {
+            padding: 2% 5%;
+            grid-template-columns: 25% 30% 25%;
+            grid-column-gap: 10%;
+        }
     }
 
     a {
-
+        height: 100%;
         text-decoration: none;
-        margin-right: 15px;
         transition: all .3s linear;
     }
 
     a:hover {}
 
+    &__mobile {
+
+        &--hamburger {
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
+        }
+
+        &--menu {
+            display: none;
+        }
+    }
+
     &__logo {
         width: 130px;
-        bottom: 18%;
-        left: 5%;
+        float: left;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
 
     &__login {
+
         form>* {
             display: inline-block;
             margin-right: 15px;
+
+            @include tablet {
+                margin-right: 0;
+            }
         }
 
         form {
@@ -48,10 +107,35 @@
             grid-template-columns: 4fr 4fr 2.5fr 2.5fr;
             grid-column-gap: 3%;
 
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+
+                #email-login,
+                #password-login,
+                #submit-login {
+                    display: none;
+                }
+
+                #openLogin {
+                    display: block;
+                    background-color: var(--font-color);
+                    color: var(--dark-gray);
+                    font-weight: 500;
+                }
+
+                button {
+                    padding: 6px 15px;
+                }
+            }
+
             input {
                 font-size: 16px;
                 color: var(--font-color);
             }
+        }
+
+        #openLogin {
+            display: none;
         }
 
         #email-login,
@@ -75,9 +159,25 @@
     &__menu {
         display: flex;
 
-        a{
-            padding: 3%;   
+        @include tablet {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70vw;
+            height: 100vh;
+            z-index: 15;
+            background-color: var(--primary-color);
+            padding: 20% 2% 2% 10%;
+            visibility: hidden;
+            transition: all .4s ease-in-out;
+            transform: translateX(-100%);
         }
+
+        a {
+            padding: 3%;
+        }
+
         li {
             text-align: center;
             padding: 3%;
@@ -87,19 +187,29 @@
             font-style: normal;
             font-size: 18px;
             color: var(--primary-color);
+
+            @include tablet {
+                text-align: left;
+                color: var(--font-color);
+            }
         }
     }
 
     &__account {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
-
+        justify-items: end;
 
         a {
             background-color: transparent;
             display: grid;
             grid-template-columns: 40px 1fr;
             align-content: center;
+
+            @include tablet {
+                justify-items: end;
+                grid-template-columns: 40px;
+            }
 
             p {
                 padding: 2% 0 2% 8%;
@@ -108,6 +218,10 @@
                 font-size: 18px;
                 margin: auto 0;
                 transition: all .3s ease;
+
+                @include tablet {
+                    display: none;
+                }
             }
         }
 

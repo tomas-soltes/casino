@@ -13,24 +13,44 @@
     text-align: right;
     z-index: 3;
 
+    @include tablet {
+      width: 90%;
+      transform: translate(-50%,-50%);
+      
+    }
+
     h1 {
       background-color: transparent;
       text-align: right;
-      padding: 0;
+      background-color: var(--primary-color-opacity);
+      padding: 8%;
+      border-radius: 15px;
 
       p:nth-child(1) {
         font-size: 70px;
         font-weight: 600;
+
+        @include tablet {
+          font-size: 40px;
+        }
       }
 
       p:nth-child(2) {
         font-size: 90px;
         font-weight: 700;
+
+        @include tablet {
+          font-size: 50px;
+        }
       }
 
       p:nth-child(3) {
         font-size: 50px;
         opacity: 0.7;
+
+        @include tablet {
+          font-size: 30px;
+        }
       }
     }
 
@@ -40,6 +60,10 @@
       padding: 3% 8%;
       margin: 8% 0 0 0;
       z-index: 999;
+    
+      @include tablet {
+        border-radius: 10px;
+      }
     }
   }
 }

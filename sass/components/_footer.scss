@@ -7,6 +7,9 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: var(--light-gray);
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
 
     &__social {
       display: grid;
@@ -16,6 +19,12 @@
       justify-items: center;
       padding-right: 20%;
       border-right: 1px solid gray;
+
+      @include tablet {
+        padding: 7% 15%;
+        border-right: none;
+        border-bottom: 1px solid gray;
+      }
 
       img {
         cursor: pointer;
@@ -29,6 +38,11 @@
       padding: 0 5%;
       grid-template-columns: repeat(6, 1fr);
       grid-column-gap: 4%;
+
+      @include tablet {
+        padding: 5% 0;
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     img {
@@ -47,6 +61,11 @@
     grid-column-gap: 5%;
     padding: 5% 8% 2% 8%;
 
+    @include tablet {
+      grid-template-columns: 1fr;
+      padding: 8% 8% 5% 8%;
+    }
+
     &__logo {
       padding: 0 15% 5% 15%;
       margin: auto;
@@ -54,11 +73,18 @@
 
     &__menu {
       padding: 5%;
+      @include tablet {
+        padding-top: 10%;
+      }
 
       h3 {
         font-size: 20px;
         font-weight: 400;
         margin-bottom: 10%;
+
+        @include tablet {
+          margin-bottom: 4%;
+        }
       }
 
       ul {

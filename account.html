@@ -14,6 +14,9 @@
 
 <body>
     <nav class="nav logged_in" id="nav">
+        <div onclick="toggleMenu()" class="nav__mobile--hamburger">
+            <span></span>
+        </div>
         <div class="nav__logo">
             <a href="index.html"><img src="img/logo.png" alt="Logo" onmouseover="this.src='img/logo-blue.png'"
                     onmouseout="this.src='img/logo.png'" /></a>
@@ -109,14 +112,17 @@
                             <input type="radio" id="50" name="addBalance" required>
                             <label for="50" class="addMoneyModal__box__cards--card" value="50"><span>50$</span></label>
                             <input type="radio" id="300" name="addBalance" required>
-                            <label for="300" class="addMoneyModal__box__cards--card" value="300"> <span>300$</span></label>
+                            <label for="300" class="addMoneyModal__box__cards--card" value="300">
+                                <span>300$</span></label>
                             <input type="radio" id="500" name="addBalance" required>
-                            <label for="500" class="addMoneyModal__box__cards--card" value="500"> <span>500$</span> </label>
+                            <label for="500" class="addMoneyModal__box__cards--card" value="500"> <span>500$</span>
+                            </label>
                         </div>
                         <p class="addMoneyModal__box__cards--another">Choose another amount</p>
                     </div>
                     <div class="step_box_button">
-                        <button onclick="goToStep2()" type="button" class="addMoneyModal__box__button step_box_button_1" disabled>Next
+                        <button onclick="goToStep2()" type="button" class="addMoneyModal__box__button step_box_button_1"
+                            disabled>Next
                             step</button></div>
                 </form>
                 <form class="step_box_2" onsubmit="goToStep3(); return false">
@@ -144,8 +150,7 @@
                     </div>
                     <div class="step_box_button">
                         <a class="goBack" onclick="goBackToStep1()">Back</a>
-                        <button class="addMoneyModal__box__button step_box_button_2"
-                            type="submit">Next
+                        <button class="addMoneyModal__box__button step_box_button_2" type="submit">Next
                             step</button>
                     </div>
                 </form>
@@ -273,8 +278,9 @@
                     </div>
                     <div class="step_box_button">
                         <a class="goBack" onclick="goBackToStep2()">Back</a>
-                        <button class="addMoneyModal__box__button step_box_button_3" type="submit" disabled>Finish</button> </div>
-                    </form>
+                        <button class="addMoneyModal__box__button step_box_button_3" type="submit"
+                            disabled>Finish</button> </div>
+                </form>
                 </form>
                 <div class="thankYouBox">
                     <h2>You've added 300$</h2>
@@ -354,6 +360,6 @@
 </body>
 
 <script src="scripts/account.js"></script>
-<script src="scripts/addMoney.js"></script>
+<script src="scripts/main.js"></script>
 
 </html>

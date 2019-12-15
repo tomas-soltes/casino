@@ -278,6 +278,7 @@ function createUserList(data) {
 
         function forgotPassword() {
             if (usedLoginForm == formLogInForgot) {
+                document.querySelector(".wrongPassword").style.opacity = "1";
                 document.querySelector(".wrongPassword").classList.add('bounceAnimation');
                 setTimeout(function () {
                     document.querySelector(".wrongPassword").classList.remove('bounceAnimation');
@@ -287,13 +288,6 @@ function createUserList(data) {
                 document.getElementById("forgotEmail").value = usedEmail;
                 openLoginForgot();
             }
-        }
-
-        function openLoginForgot() {
-            console.log("wrong");
-
-            document.querySelector(".signInForgot").style.visibility = "visible";
-            document.querySelector(".signInForgot").style.opacity = "1";
         }
     }
 
@@ -331,12 +325,18 @@ function createUserList(data) {
 }
 
 //SIGN UP FORM
-document.getElementById("openSignUpForm").addEventListener("click", openSignUpForm);
-document.getElementById("closeSignUpForm").addEventListener("click", closeSignUpForm);
-document.querySelector(".filter__signUp").addEventListener("click", closeSignUpForm);
-document.getElementById("closeSignInForgotForm").addEventListener("click", closeSignInForgotForm);
-document.querySelector(".filter__signInForgot").addEventListener("click", closeSignInForgotForm);
+function openLoginForgot() {
+    console.log("wrong");
+    document.querySelector(".signInForgot").style.visibility = "visible";
+    document.querySelector(".signInForgot").style.opacity = "1";
+    document.querySelector(".wrongPassword").style.opacity = "1";
+}
 
+function openLoginForm() {
+    document.querySelector(".signInForgot").style.visibility = "visible";
+    document.querySelector(".signInForgot").style.opacity = "1";
+    document.querySelector(".wrongPassword").style.opacity = "0";
+}
 
 function closeSignInForgotForm() {
     document.querySelector(".signInForgot").style.visibility = "hidden";

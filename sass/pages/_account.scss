@@ -5,15 +5,28 @@
     grid-template-columns: 2.5fr 1fr 1fr;
     grid-column-gap: 5%;
 
+    @include tablet {
+        padding: 10% 7% 5% 7%;
+        grid-template-columns: 3fr 1fr;
+    }
+
     &__title {
         display: grid;
         grid-template-columns: 90px 1fr;
         align-content: center;
 
+        @include tablet {
+            grid-template-columns: 45px 1fr;
+        }
+
         p {
             margin: auto 10%;
             font-size: 35px;
             font-weight: 600;
+
+            @include tablet {
+                font-size: 22px;
+            }
         }
     }
 
@@ -21,6 +34,10 @@
         margin: auto 10%;
         font-size: 40px;
         font-weight: 600;
+
+        @include tablet {
+            font-size: 25px;
+        }
     }
 
     button {
@@ -31,6 +48,14 @@
         font-weight: 600;
         color: var(--primary-color);
         background-color: var(--font-color);
+
+        @include tablet {
+            padding: 4% 8%;
+            margin: 5% auto;
+            font-size: 18px;
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
     }
 }
 
@@ -40,8 +65,17 @@
     grid-template-columns: 1fr 1fr;
     background-color: var(--font-color);
 
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
     &__personal {
         padding: 5%;
+
+        @include tablet {
+            margin-bottom: 5%;
+        }
+
 
         h1 {
             color: var(--primary-color);
@@ -86,6 +120,11 @@
             background-color: var(--primary-color);
             color: var(--font-color);
             margin: auto;
+
+            @include tablet {
+                border-radius: 7px;
+                margin-bottom: 10%;
+            }
         }
     }
 
@@ -559,7 +598,7 @@
         color: var(--font-color);
 
         .step_box_3 {
-           display: none;
+            display: none;
         }
 
         h1,

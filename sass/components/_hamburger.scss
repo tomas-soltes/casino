@@ -1,15 +1,12 @@
-.menu {
+.nav__mobile {
 
-  &__hamburger {
-    position: absolute;
-    width: 5rem;
-    height: 5rem;
-    top: 52%;
-    transform: translateY(-50%);
-    right: 3%;
+  &--hamburger {
+    width: 45px;
+    height: 45px;
     transition-duration: 0.3s;
     cursor: pointer;
-    z-index: 10;
+    z-index: 20;
+    position: relative;
 
     span,
     span:before,
@@ -21,207 +18,27 @@
       background-color: black;
       border-radius: 0.3rem;
       background-color: var(--primary-color);
+      border: none;
     }
 
     span {
-      height: 0;
+      height: 3px;
+      content: "";
       top: 50%;
       transform: translateY(-50%);
-
+      
       &:before {
-        height: 0.4rem;
+        height: 3px;
         content: "";
-        top: -1.3rem;
+        top: -12px;
       }
 
       &:after {
-        height: 0.4rem;
+        height: 3px;
         content: "";
-        top: 1rem;
-      }
-    }
-
-    &.open {
-      span {
-        &:before {
-          transform: rotateZ(135deg) scaleX(1.25) translate(0.6rem, -0.8rem);
-          background-color: white;
-        }
-
-        &:after {
-          transform: rotateZ(-135deg) scaleX(1.25) translate(0.7rem, 1rem);
-          background-color: white;
-        }
-      }
-    }
-  }
-
-  @include desktop {
-    &__hamburger:hover {
-      width: 6rem;
-      right: 4.5rem;
-    }
-  }
-
-  &__content {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    visibility: hidden;
-    background-color: var(--hamburger-menu-color);
-    clip-path: var(--circleSize);
-    -webkit-clip-path: var(--circleSize);
-
-    &--nav {
-      position: absolute;
-      display: grid;
-      justify-items: center;
-      top: 50%;
-      left: 50%;
-      width: 55vh;
-      transform: translate(-50%, -50%);
-      text-align: center;
-
-
-      ul {
-        li {
-          font-size: 6rem;
-          font-weight: 600;
-          color: var(--font-color);
-          list-style: none;
-          padding: 1rem 0;
-          cursor: pointer;
-
-          a {
-            text-decoration: none;
-            color: var(--font-color);
-          }
-        }
-
-        li:hover a {
-          color: rgba(255, 255, 255, 0.63);
-        }
-      }
-
-      .some {
-        margin-top: 10%;
-        display: grid;
-        align-items: center;
-        width: 65%;
-        padding: 5% 0;
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 15%;
-        border-top: 1px solid rgba(230, 230, 230, 0.219);
-
-        a:hover {
-          cursor: pointer;
-          opacity: 0.4;
-        }
+        top: 12px;
       }
     }
   }
 }
 
-.menu.active {
-  .menu__content {
-    animation: circle .3s forwards;
-  }
-}
-
-.menu.noActive {
-  .menu__content {
-    animation: circleBack .3s forwards;
-  }
-}
-
-
-@keyframes circle {
-  0% {
-    clip-path: var(--circleSize);
-    -webkit-clip-path: var(--circleSize);
-    visibility: hidden;
-  }
-
-  100% {
-    clip-path: circle(100%);
-    -webkit-clip-path: circle(100%);
-    visibility: visible;
-  }
-}
-
-@keyframes circleBack {
-  0% {
-    clip-path: circle(100%);
-    -webkit-clip-path: circle(100%);
-    visibility: visible;
-  }
-
-  100% {
-    clip-path: var(--circleSize);
-    -webkit-clip-path: var(--circleSize);
-    visibility: hidden;
-
-  }
-}
-
-
-@include tablet {
-  :root {
-    --circleSize: circle(0% at 88% 5%);
-  }
-
-  .menu {
-    &__hamburger {
-      right: 7%;
-      width: 4.5rem;
-      height: 4.5rem;
-
-      span {
-        &:before {
-          height: 0.3rem;
-          content: "";
-          top: -1rem;
-        }
-
-        &:after {
-          height: 0.3rem;
-          content: "";
-          top: .7rem;
-        }
-      }
-
-      &.open {
-        span {
-          &:before {
-            transform: rotateZ(135deg) scaleX(1.25) translate(0.4rem, -0.6rem);
-          }
-
-          &:after {
-            transform: rotateZ(-135deg) scaleX(1.25) translate(0.5rem, .8rem);
-          }
-        }
-      }
-
-
-    }
-
-    &__content {
-      &--nav {
-        width: 40vh;
-
-        ul {
-          li {
-            font-size: 3rem;
-          }
-        }
-
-        .some {
-          width: 80%;
-        }
-      }
-    }
-  }
-}

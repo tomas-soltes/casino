@@ -15,15 +15,15 @@
 <body>
     <nav class="nav landing">
         <div class="nav__logo">
-            <a><img src="img/logo.png" alt="Logo" onmouseover="this.src='img/logo-blue.png'"
-                    onmouseout="this.src='img/logo.png'" /></a>
+            <a><img src="img/logo.png" alt="Logo"/></a>
         </div>
         <div class="nav__login">
             <form class="form-login">
                 <input type="email" id="email-login" name="email" placeholder="E-mail" required></input>
                 <input type="password" id="password-login" name="password" placeholder="Password" required></input>
                 <input type="submit" id="submit-login" value="Login">
-                <button type="button" id="openSignUpForm">Register</button>
+                <button id="openLogin" type="button" onclick="openLoginForm()">Login</button>
+                <button type="button" onclick="openSignUpForm()">Register</button>
             </form>
         </div>
     </nav>
@@ -125,7 +125,7 @@
     </main>
 
     <section class="form signUp">
-        <div class="filter filter__signUp"></div>
+        <div onclick="closeSignUpForm()" class="filter filter__signUp"></div>
         <div class="signUp__box">
             <h1>Sign up</h1>
             <div class="signUp__box__grid">
@@ -150,12 +150,12 @@
                     <input type="submit" value="Sign Up">
                 </form>
             </div>
-            <div id="closeSignUpForm" class="close"></div>
+            <div onclick="closeSignUpForm()" id="closeSignUpForm" class="close"></div>
         </div>
     </section>
 
     <section class="form signInForgot">
-        <div class="filter filter__signInForgot"></div>
+        <div onclick="closeSignInForgotForm()" class="filter filter__signInForgot"></div>
         <div class="signInForgot__box">
             <h1>Login</h1>
             <form class="form-login-forgot">
@@ -165,7 +165,7 @@
                 <p><u>Forgot password?</u></p>
                 <input type="submit" id="submit-login" value="Login">
             </form>
-            <div id="closeSignInForgotForm" class="close"></div>
+            <div onclick="closeSignInForgotForm()" id="closeSignInForgotForm" class="close"></div>
         </div>
     </section>
 
@@ -271,7 +271,7 @@
         </section>
     </footer>
 </body>
-
 <script src="scripts/sign-up.js"></script>
+<script src="scripts/main.js"></script>
 
 </html>
