@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 433 434">
+  <title>ball</title>
+  <g style="isolation: isolate">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <image width="43" height="44" transform="translate(197 7)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAsCAYAAAD8WEF4AAAACXBIWXMAAAsSAAALEgHS3X78AAADGklEQVRYR92YbXPaMBCEV4aE0P7/v9piQlA/oEWr0+kFM5MJvZkbGSPLD+s9SSbEGPEqsYw6/KR4Kdj9qMMoQghh1IcRn/Rc2HK9AzgDXNxoC/hDsAYymNaeBwygfL6ffwR6CrYD6R17EVGCboIewgqoBfNS+wE1oJf3fiPgLqwBtbmY1kIDNdjVtBV4D7g5G3RAF5M71OAMC/iV2pDaK8qIIYTQAh5NXS3InZP8zoMlqE0P+jFlnYIirMLtTfI8+/PREuwiyT5f6R6Fd1vqVrCNx6+K7gG8OUlgqquP/gLgU3JJLVD6mfd27dCzgYVV0PeUBzlWYIaCnlN6VmEGOVdFC1bV1cdP2EPKj5SEfkO2Ai1A0BW+TbyZgd8XUcB2vLoge5OKHk0ekNXlzajqms6rqleTC7IVXO96yra8ukO2AFX9JUmF6Vv6dU3XeV5m7pCBm3Z4xrMfuCn6OyXVpYJX3JR9R6m2LTgtSqYbs571YKnuEVldWoGwn8ighNdi0xlELdL3bGPb17ODLbRjai2sHp8BnJAL0YJWyqpvRysY0AbWgrOpxUJQ2kEXEAvajRlYoK+y/QHqQQs2pWYrllGHnxSzyuqEbTcmenxBnn5YUF4/jqHjDmMGtgXJTQkrm4UVURcVk9e0oLtxh40xRjMj9NTkHLkiL7MEtLPBitsMsKbktVMqj1YwIF9gQXWe5MrERYDLq10UVgB/UxL6nMahygoMGGBGzwZWWQt7QrlpoSW85fYE4A8ysAc79K8H21KVj1+nH4LykZ/Q3si01J2yA2BgjW+tX1np3JOyjz7u0RbxhBKWBecW2uzmO6JU7St91lcSDkyg2c2351m1AqQtYuRZtgqs31NVblg8eyiwzec8K1awsAG3gfWcgtDLnvI6L4/m2gjUFgAayjreBW4D8rP6mSC63t+HQl2kmlNeZYxWML3I/noC6KNvwWr/q8loshkv9ffR//PH3L1T/dbL1jv2woIVkMAYFJiEZXSgi25ybAffBMl4CJbReF8bRXGjRyAZm2A1HPBmbAHUeBr2O+Ol3sFeCvYfRAFVwPRiPRgAAAAASUVORK5CYII=" style="opacity: 0.21;mix-blend-mode: multiply"/>
+        <circle cx="216.5" cy="27" r="6.5" style="fill: #2b2b2b"/>
+      </g>
+      <rect width="433" height="434" style="fill: none"/>
+    </g>
+  </g>
+</svg>

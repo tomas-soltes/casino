@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.007 23.006">
+  <defs>
+    <linearGradient id="New_Gradient_Swatch" data-name="New Gradient Swatch" x1="11.503" y1="32.608" x2="11.503" y2="-13.706" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3dfab"/>
+      <stop offset="0.229" stop-color="#f8d565"/>
+      <stop offset="0.443" stop-color="#a86a18"/>
+      <stop offset="0.537" stop-color="#fadb6e"/>
+      <stop offset="0.751" stop-color="#fff"/>
+      <stop offset="0.856" stop-color="#f5e5bb"/>
+      <stop offset="1" stop-color="#e0ad2a"/>
+    </linearGradient>
+  </defs>
+  <title>icon-x</title>
+  <polygon id="Clear-icon" points="23.007 3.661 19.345 0 11.503 7.842 3.662 0 0 3.661 7.842 11.503 0 19.345 3.662 23.006 11.503 15.164 19.345 23.006 23.007 19.345 15.165 11.503 23.007 3.661" style="fill: url(#New_Gradient_Swatch)"/>
+</svg>
