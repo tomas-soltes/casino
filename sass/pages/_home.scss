@@ -7,65 +7,76 @@
   .header__text {
     position: absolute;
     top: 55%;
-    left: 50%;
+    right: 5%;
+    left: unset;
     transform: translateY(-50%);
-    width: 45%;
+    width: 50%;
     text-align: right;
     z-index: 3;
 
     @include tablet {
       width: 90%;
-      transform: translate(-50%,-50%);
-      
+      text-align: center;
     }
 
     h1 {
       background-color: transparent;
       text-align: right;
-      background-color: var(--primary-color-opacity);
       padding: 8%;
       border-radius: 15px;
 
+      @include tablet {
+        text-align: center;
+        background-color: var(--primary-color-opacity);
+      }
+
       p:nth-child(1) {
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 600;
 
         @include tablet {
-          font-size: 35px;
+          font-size: 30px;
         }
       }
 
       p:nth-child(2) {
-        font-size: 80px;
+        font-size: 60px;
         font-weight: 700;
-
+        color: var(--primary-color);
         @include tablet {
-          font-size: 45px;
-        }
-      }
-
-      p:nth-child(3) {
-        font-size: 40px;
-        opacity: 0.7;
-
-        @include tablet {
-          font-size: 25px;
+          padding: 9% 0;
+          font-size: 35px;
+          color: var(--font-color);
         }
       }
     }
 
     button {
       font-size: 30px;
-      border-radius: 15px;
-      padding: 3% 8%;
-      margin: 8% 0 0 0;
+      border-radius: 10px;
       z-index: 999;
-    
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 150px;
+        left: 0;
+        top: 0;
+        transform: translate(-39%,-52%);
+      }
+
       @include tablet {
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 20px;
+        margin: 20% auto 0 auto;
+
+        img{
+          width: 100px;
+        }
       }
     }
+
+
   }
 }
 
@@ -168,6 +179,7 @@
           border-right-color: transparent;
           border-left-color: transparent;
           border-bottom-color: transparent;
+
           @include tablet {
             bottom: -30px;
             right: 15px;
