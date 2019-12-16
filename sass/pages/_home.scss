@@ -31,7 +31,7 @@
         font-weight: 600;
 
         @include tablet {
-          font-size: 40px;
+          font-size: 35px;
         }
       }
 
@@ -40,7 +40,7 @@
         font-weight: 700;
 
         @include tablet {
-          font-size: 50px;
+          font-size: 45px;
         }
       }
 
@@ -49,7 +49,7 @@
         opacity: 0.7;
 
         @include tablet {
-          font-size: 30px;
+          font-size: 25px;
         }
       }
     }
@@ -63,6 +63,7 @@
     
       @include tablet {
         border-radius: 10px;
+        font-size: 20px;
       }
     }
   }
@@ -93,9 +94,13 @@
       position: absolute;
       background-color: rgb(245, 245, 245);
       padding: 2%;
-      width: 20%;
+      width: 300px;
       border-radius: 12px;
       transition: all .3s ease-in-out;
+
+      @include tablet {
+        padding: 5%;
+      }
 
       p {
         font-size: 16px;
@@ -105,16 +110,28 @@
       &--myAccount {
         top: 12%;
         right: 7%;
+
+        @include tablet {
+          right: 2%;
+        }
       }
 
       &--myBalance {
         top: 12%;
         right: 17%;
+
+        @include tablet {
+          right: 15%;
+        }
       }
 
       &--playNow {
         top: 37%;
         right: 8%;
+
+        @include tablet {
+          top: 43%;
+        }
       }
 
       &__box {
@@ -124,6 +141,10 @@
           position: absolute;
           background: transparent;
           border: 25px solid rgb(245, 245, 245);
+
+          @include tablet {
+            border: 15px solid rgb(245, 245, 245);
+          }
         }
 
         .tip-up {
@@ -133,6 +154,11 @@
           border-right-color: transparent;
           border-left-color: transparent;
           border-top-color: transparent;
+
+          @include tablet {
+            top: -30px;
+            right: 15px;
+          }
         }
 
         .tip-down {
@@ -141,6 +167,10 @@
           border-right-color: transparent;
           border-left-color: transparent;
           border-bottom-color: transparent;
+          @include tablet {
+            bottom: -30px;
+            right: 15px;
+          }
         }
       }
     }
@@ -154,6 +184,11 @@
       left: 0;
       padding: 3% 6%;
 
+      @include tablet {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+
       &--steps {
         float: left;
         width: 80%;
@@ -165,6 +200,10 @@
           padding: 2% 5%;
           list-style: none;
           opacity: .5;
+
+          @include tablet {
+            font-size: 17px;
+          }
         }
       }
 
@@ -172,6 +211,14 @@
         padding: 1% 4%;
         font-size: 35px;
         float: right;
+
+        @include tablet {
+          float: none;
+          padding: 8% 16%;
+          font-size: 22px;
+          width: auto;
+          margin: auto;
+        }
       }
 
     }

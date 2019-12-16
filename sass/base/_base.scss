@@ -20,7 +20,7 @@ body {
     background-color: var(--background-color);
     scroll-behavior: smooth;
     color: var(--font-color);
-    overflow:auto
+    overflow: auto
 }
 
 
@@ -55,7 +55,7 @@ button {
     font-size: 16px;
 }
 
-button:disabled{
+button:disabled {
     background-color: rgb(187, 187, 187);
 }
 
@@ -120,12 +120,15 @@ img {
     cursor: pointer;
 
     @include tablet {
-        right: 30px;
-    top: 30px;
+        right: 40px;
+        top: 30px;
+        width: 25px;
+        height: 25px;
     }
 }
 
-.close.gold:before,.close.gold:after{
+.close.gold:before,
+.close.gold:after {
     background-color: var(--primary-color);
 }
 
@@ -143,6 +146,10 @@ img {
     border-radius: 1.5px;
     background-color: #333;
     z-index: 9999;
+
+    @include tablet {
+        height: 26px;
+    }
 }
 
 .close:before {
@@ -159,12 +166,23 @@ img {
     height: 45px;
     top: 50px;
     right: 50px;
+
+    @include tablet {
+        right: 40px;
+        top: 30px;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .closeLight:before,
 .closeLight:after {
     background-color: rgb(255, 255, 255);
     height: 46px;
+
+    @include tablet {
+        height: 31px;
+    }
 }
 
 .closeLight:hover {

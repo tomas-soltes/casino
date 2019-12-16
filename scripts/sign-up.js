@@ -379,15 +379,18 @@ function spinWheel() {
     win = winPrices[rotateIndex];
     console.log(rotateIndex);
     
-    let rotateDeg = rotateIndex*45 + 22;
+    let rotateDeg = rotateIndex*45 + 360 + 22;
     document.getElementById("wheel_rotate").style.transform = "rotate(" + rotateDeg + "deg)";;
 
     document.querySelector(".wheel_img").addEventListener('transitionend', () => {
-        document.querySelector(".spinning_wheel__text--spin").classList.add('scaleDown');
+        setTimeout(function() {
+            document.querySelector(".spinning_wheel__text--spin").classList.add('scaleDown');
         document.querySelector(".spinning_wheel__text--win").classList.add('scaleUp');
+        document.querySelector(".wheel_img").style.display = "none";
         document.querySelector(".won").textContent = "$" + win;
 
         document.querySelector(".email-spin-fill").value = document.querySelector(".email-spin").value;
+          }, 800);
     });
 }
 

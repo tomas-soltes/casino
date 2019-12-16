@@ -153,7 +153,7 @@ function removeAll() {
   });
 }
 
-document.getElementById('nextButton').addEventListener("click", goNextStep);
+window.addEventListener("click", goNextStep);
 
 function goNextStep() {
   let myAccountActive = document.querySelector("body").classList.contains('onboarding--myAccount');
@@ -230,6 +230,7 @@ document.querySelectorAll('.addMoneyModal__box__cards--card').forEach(input => {
     newBalance = Number(event.target.getAttribute('value'));
     addMoney_form = document.querySelector('.step_box_1');
     addMoney_button = document.querySelector('.step_box_button_1');
+    document.querySelector('.thankYouBox__text').textContent="You've added " + newBalance + "$";
     setTimeout(function () {
       changeSubmitButton(addMoney_form, addMoney_button);
     }, 10);
@@ -268,6 +269,5 @@ function finishBalance() {
   updateDB(loggedUser);
   setTimeout(function () {
     location.reload();
-  }, 300);
- /*  location.reload(); */
+  }, 800);
 }

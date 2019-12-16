@@ -113,10 +113,13 @@ img {
   cursor: pointer; }
   @media (max-width: 769px) {
     .close {
-      right: 30px;
-      top: 30px; } }
+      right: 40px;
+      top: 30px;
+      width: 25px;
+      height: 25px; } }
 
-.close.gold:before, .close.gold:after {
+.close.gold:before,
+.close.gold:after {
   background-color: var(--primary-color); }
 
 .close:hover {
@@ -132,6 +135,10 @@ img {
   border-radius: 1.5px;
   background-color: #333;
   z-index: 9999; }
+  @media (max-width: 769px) {
+    .close:before,
+    .close:after {
+      height: 26px; } }
 
 .close:before {
   transform: rotate(45deg); }
@@ -145,11 +152,21 @@ img {
   height: 45px;
   top: 50px;
   right: 50px; }
+  @media (max-width: 769px) {
+    .closeLight {
+      right: 40px;
+      top: 30px;
+      width: 30px;
+      height: 30px; } }
 
 .closeLight:before,
 .closeLight:after {
   background-color: white;
   height: 46px; }
+  @media (max-width: 769px) {
+    .closeLight:before,
+    .closeLight:after {
+      height: 31px; } }
 
 .closeLight:hover {
   opacity: 1; }
@@ -458,6 +475,12 @@ b {
     z-index: 1;
     transform: rotate(45deg);
     transition: all 2s ease-in-out; }
+    @media (max-width: 769px) {
+      .spinning_wheel .wheel_img {
+        bottom: 5%;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%) rotate(0); } }
   .spinning_wheel #wheel_rotate {
     transform-origin: center;
     transition: all 2s ease-in-out; }
@@ -468,38 +491,65 @@ b {
     z-index: 2;
     width: 50%;
     text-align: center; }
+    @media (max-width: 769px) {
+      .spinning_wheel__text--win, .spinning_wheel__text--spin {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%; } }
     .spinning_wheel__text--win h1, .spinning_wheel__text--spin h1 {
       color: var(--primary-color);
       font-size: 80px;
       font-weight: 600;
       padding: 2% 0 0 0;
       font-family: 'Droid-serif', serif; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win h1, .spinning_wheel__text--spin h1 {
+          font-size: 35px; } }
     .spinning_wheel__text--win h2, .spinning_wheel__text--spin h2 {
       color: var(--font-color);
       font-size: 50px;
       font-weight: 600;
       font-family: 'Droid-serif', serif; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win h2, .spinning_wheel__text--spin h2 {
+          font-size: 25px; } }
     .spinning_wheel__text--win .win, .spinning_wheel__text--spin .win {
       color: var(--primary-color);
       font-size: 80px; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win .win, .spinning_wheel__text--spin .win {
+          font-size: 30px; } }
     .spinning_wheel__text--win h3, .spinning_wheel__text--spin h3 {
       color: var(--primary-color);
       font-size: 22px;
       font-weight: 300;
       font-family: 'Droid-serif', serif; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win h3, .spinning_wheel__text--spin h3 {
+          font-size: 18px; } }
     .spinning_wheel__text--win form, .spinning_wheel__text--spin form {
       padding: 12% 0 7% 0;
       margin: auto; }
       .spinning_wheel__text--win form label, .spinning_wheel__text--spin form label {
         font-size: 18px; }
+        @media (max-width: 769px) {
+          .spinning_wheel__text--win form label, .spinning_wheel__text--spin form label {
+            font-size: 15px; } }
       .spinning_wheel__text--win form input, .spinning_wheel__text--spin form input {
         width: 50%;
         margin: 3% 25%;
-        padding: 1.5%;
+        padding: 1.5% 3%;
         font-size: 16px;
         color: var(--gray);
         background-color: rgba(255, 255, 255, 0.808);
         border-radius: 8px; }
+        @media (max-width: 769px) {
+          .spinning_wheel__text--win form input, .spinning_wheel__text--spin form input {
+            font-size: 14px;
+            width: 80%;
+            margin: 3% 10%;
+            padding: 2% 4%; } }
       .spinning_wheel__text--win form input[type=submit], .spinning_wheel__text--spin form input[type=submit] {
         width: auto;
         margin-top: 4%;
@@ -510,6 +560,10 @@ b {
         font-weight: 600;
         border-radius: 15px;
         transition: all .3s ease; }
+        @media (max-width: 769px) {
+          .spinning_wheel__text--win form input[type=submit], .spinning_wheel__text--spin form input[type=submit] {
+            font-size: 25px;
+            border-radius: 8px; } }
     .spinning_wheel__text--win input[type=submit]:hover, .spinning_wheel__text--spin input[type=submit]:hover {
       transform: scale(1.2); }
   .spinning_wheel__text--win {
@@ -517,22 +571,46 @@ b {
     opacity: 0;
     transform: scale(0);
     top: 10%; }
+    @media (max-width: 769px) {
+      .spinning_wheel__text--win {
+        left: 5%;
+        width: 90%; } }
     .spinning_wheel__text--win form {
       padding: 0; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win form {
+          margin: 10% 0; } }
       .spinning_wheel__text--win form input {
         margin: 1% 25%; }
+        @media (max-width: 769px) {
+          .spinning_wheel__text--win form input {
+            margin: 1% 3%; } }
       .spinning_wheel__text--win form input[type=submit] {
         margin-top: 4%;
-        padding: 2% 6%;
+        padding: 4% 6%;
         font-size: 35px; }
+        @media (max-width: 769px) {
+          .spinning_wheel__text--win form input[type=submit] {
+            margin-top: 15%;
+            padding: 3% 8%;
+            font-size: 18px; } }
     .spinning_wheel__text--win h1 {
       font-size: 70px; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win h1 {
+          font-size: 50px; } }
     .spinning_wheel__text--win h2 {
       font-size: 100px;
       padding: 0 0 4% 0; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win h2 {
+          font-size: 70px; } }
     .spinning_wheel__text--win p {
       font-size: 18px;
       padding: 5% 0; }
+      @media (max-width: 769px) {
+        .spinning_wheel__text--win p {
+          font-size: 16px; } }
   .spinning_wheel__text--spin {
     /*       visibility: hidden;
     opacity: 0;  */ }
@@ -697,19 +775,19 @@ b {
         font-weight: 600; }
         @media (max-width: 769px) {
           .header.logged_in .header__text h1 p:nth-child(1) {
-            font-size: 40px; } }
+            font-size: 35px; } }
       .header.logged_in .header__text h1 p:nth-child(2) {
         font-size: 80px;
         font-weight: 700; }
         @media (max-width: 769px) {
           .header.logged_in .header__text h1 p:nth-child(2) {
-            font-size: 50px; } }
+            font-size: 45px; } }
       .header.logged_in .header__text h1 p:nth-child(3) {
         font-size: 40px;
         opacity: 0.7; }
         @media (max-width: 769px) {
           .header.logged_in .header__text h1 p:nth-child(3) {
-            font-size: 30px; } }
+            font-size: 25px; } }
     .header.logged_in .header__text button {
       font-size: 30px;
       border-radius: 15px;
@@ -718,7 +796,8 @@ b {
       z-index: 999; }
       @media (max-width: 769px) {
         .header.logged_in .header__text button {
-          border-radius: 10px; } }
+          border-radius: 10px;
+          font-size: 20px; } }
 
 .onboarding_flow {
   position: fixed;
@@ -741,27 +820,42 @@ b {
       position: absolute;
       background-color: whitesmoke;
       padding: 2%;
-      width: 20%;
+      width: 300px;
       border-radius: 12px;
       transition: all .3s ease-in-out; }
+      @media (max-width: 769px) {
+        .onboarding .onboarding_flow__hint {
+          padding: 5%; } }
       .onboarding .onboarding_flow__hint p {
         font-size: 16px;
         color: var(--background-color); }
       .onboarding .onboarding_flow__hint--myAccount {
         top: 12%;
         right: 7%; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__hint--myAccount {
+            right: 2%; } }
       .onboarding .onboarding_flow__hint--myBalance {
         top: 12%;
         right: 17%; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__hint--myBalance {
+            right: 15%; } }
       .onboarding .onboarding_flow__hint--playNow {
         top: 37%;
         right: 8%; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__hint--playNow {
+            top: 43%; } }
       .onboarding .onboarding_flow__hint__box .tip {
         width: 0px;
         height: 0px;
         position: absolute;
         background: transparent;
         border: 25px solid whitesmoke; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__hint__box .tip {
+            border: 15px solid whitesmoke; } }
       .onboarding .onboarding_flow__hint__box .tip-up {
         top: -45px;
         /* Same as body margin top + border */
@@ -769,12 +863,20 @@ b {
         border-right-color: transparent;
         border-left-color: transparent;
         border-top-color: transparent; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__hint__box .tip-up {
+            top: -30px;
+            right: 15px; } }
       .onboarding .onboarding_flow__hint__box .tip-down {
         bottom: -45px;
         right: 40px;
         border-right-color: transparent;
         border-left-color: transparent;
         border-bottom-color: transparent; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__hint__box .tip-down {
+            bottom: -30px;
+            right: 15px; } }
     .onboarding .onboarding_flow__box {
       background-color: var(--gray);
       width: 100vw;
@@ -782,6 +884,10 @@ b {
       bottom: 0;
       left: 0;
       padding: 3% 6%; }
+      @media (max-width: 769px) {
+        .onboarding .onboarding_flow__box {
+          display: grid;
+          grid-template-columns: 2fr 1fr; } }
       .onboarding .onboarding_flow__box--steps {
         float: left;
         width: 80%; }
@@ -792,10 +898,20 @@ b {
           padding: 2% 5%;
           list-style: none;
           opacity: .5; }
+          @media (max-width: 769px) {
+            .onboarding .onboarding_flow__box--steps li {
+              font-size: 17px; } }
       .onboarding .onboarding_flow__box button {
         padding: 1% 4%;
         font-size: 35px;
         float: right; }
+        @media (max-width: 769px) {
+          .onboarding .onboarding_flow__box button {
+            float: none;
+            padding: 8% 16%;
+            font-size: 22px;
+            width: auto;
+            margin: auto; } }
   .onboarding .nav__logo, .onboarding .nav__menu {
     opacity: .4; }
   .onboarding .nav__account .addMoney,
@@ -953,6 +1069,9 @@ b {
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+    @media (max-width: 769px) {
+      .addMoneyModal__box {
+        width: 90%; } }
     .addMoneyModal__box .thankYouBox {
       position: absolute;
       top: 0;
@@ -962,15 +1081,32 @@ b {
       opacity: 0;
       visibility: hidden;
       z-index: 20; }
-      .addMoneyModal__box .thankYouBox h2 {
-        padding: 0 0 9% 0;
-        font-size: 60px; }
-      .addMoneyModal__box .thankYouBox img {
-        width: 20%; }
+      .addMoneyModal__box .thankYouBox__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%); }
+        .addMoneyModal__box .thankYouBox__content h2 {
+          padding: 5%;
+          font-size: 60px;
+          /* color: var(--font-color); */ }
+          @media (max-width: 769px) {
+            .addMoneyModal__box .thankYouBox__content h2 {
+              padding: 10%;
+              font-size: 40px; } }
+        .addMoneyModal__box .thankYouBox__content img {
+          width: 20%; }
+          @media (max-width: 769px) {
+            .addMoneyModal__box .thankYouBox__content img {
+              width: 40%; } }
     .addMoneyModal__box .forms_box {
       width: 100%;
       height: 40vh;
       position: relative; }
+      @media (max-width: 769px) {
+        .addMoneyModal__box .forms_box {
+          height: 50vh; } }
     .addMoneyModal__box .goBack {
       position: absolute;
       top: 50%;
@@ -979,6 +1115,9 @@ b {
       margin: auto 10%;
       font-size: 18px;
       color: gray; }
+      @media (max-width: 769px) {
+        .addMoneyModal__box .goBack {
+          font-size: 14px; } }
     .addMoneyModal__box .goBack:hover {
       color: var(--primary-color); }
     .addMoneyModal__box .step_box_1,
@@ -991,6 +1130,11 @@ b {
       left: 0;
       width: 100%;
       transition: all .5s ease-in-out; }
+      @media (max-width: 769px) {
+        .addMoneyModal__box .step_box_1,
+        .addMoneyModal__box .step_box_2,
+        .addMoneyModal__box .step_box_3 {
+          height: 50vh; } }
       .addMoneyModal__box .step_box_1 .step_box_form,
       .addMoneyModal__box .step_box_2 .step_box_form,
       .addMoneyModal__box .step_box_3 .step_box_form {
@@ -1001,6 +1145,11 @@ b {
         width: 100%;
         height: 25vh;
         z-index: 3; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box .step_box_1 .step_box_form,
+          .addMoneyModal__box .step_box_2 .step_box_form,
+          .addMoneyModal__box .step_box_3 .step_box_form {
+            height: 35vh; } }
       .addMoneyModal__box .step_box_1 .step_box_button,
       .addMoneyModal__box .step_box_2 .step_box_button,
       .addMoneyModal__box .step_box_3 .step_box_button {
@@ -1009,6 +1158,11 @@ b {
         left: 0;
         width: 100%;
         height: 15vh; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box .step_box_1 .step_box_button,
+          .addMoneyModal__box .step_box_2 .step_box_button,
+          .addMoneyModal__box .step_box_3 .step_box_button {
+            height: 10vh; } }
       .addMoneyModal__box .step_box_1 form,
       .addMoneyModal__box .step_box_2 form,
       .addMoneyModal__box .step_box_3 form {
@@ -1028,6 +1182,11 @@ b {
         font-size: 1.6rem;
         font-weight: 500;
         color: #6A6A6A; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box .step_box_1 label,
+          .addMoneyModal__box .step_box_2 label,
+          .addMoneyModal__box .step_box_3 label {
+            font-size: 14px; } }
       .addMoneyModal__box .step_box_1 input,
       .addMoneyModal__box .step_box_2 input,
       .addMoneyModal__box .step_box_3 input {
@@ -1049,6 +1208,11 @@ b {
         box-sizing: border-box;
         padding: 5% 10%;
         font-size: 16px; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box .step_box_1 .textarea,
+          .addMoneyModal__box .step_box_2 .textarea,
+          .addMoneyModal__box .step_box_3 .textarea {
+            font-size: 13px; } }
         .addMoneyModal__box .step_box_1 .textarea b,
         .addMoneyModal__box .step_box_2 .textarea b,
         .addMoneyModal__box .step_box_3 .textarea b {
@@ -1071,6 +1235,12 @@ b {
         .addMoneyModal__box .step_box_3 .formCheck p {
           color: var(--dark-gray);
           font-size: 1.2rem; }
+          @media (max-width: 769px) {
+            .addMoneyModal__box .step_box_1 .formCheck p,
+            .addMoneyModal__box .step_box_2 .formCheck p,
+            .addMoneyModal__box .step_box_3 .formCheck p {
+              width: 60%;
+              font-size: 13px; } }
         .addMoneyModal__box .step_box_1 .formCheck__checkbox,
         .addMoneyModal__box .step_box_2 .formCheck__checkbox,
         .addMoneyModal__box .step_box_3 .formCheck__checkbox {
@@ -1141,10 +1311,19 @@ b {
       padding: 5% 15%; }
       .addMoneyModal__box .step_box_2 .step_box_form {
         padding: 0 25%; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box .step_box_2 .step_box_form {
+            padding: 4% 5%; } }
         .addMoneyModal__box .step_box_2 .step_box_form label {
           font-size: 17px; }
+          @media (max-width: 769px) {
+            .addMoneyModal__box .step_box_2 .step_box_form label {
+              font-size: 15px; } }
         .addMoneyModal__box .step_box_2 .step_box_form input {
           font-size: 16px; }
+          @media (max-width: 769px) {
+            .addMoneyModal__box .step_box_2 .step_box_form input {
+              font-size: 14px; } }
     .addMoneyModal__box__steps {
       text-align: center; }
       .addMoneyModal__box__steps--illustration {
@@ -1152,6 +1331,10 @@ b {
         position: relative;
         margin: 7% auto 4% auto;
         width: 50%; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box__steps--illustration {
+            margin: 12% auto 4% auto;
+            width: 70%; } }
         .addMoneyModal__box__steps--illustration .dot {
           position: absolute;
           top: 50%;
@@ -1185,6 +1368,10 @@ b {
         width: 70%;
         display: grid;
         grid-template-columns: repeat(3, 1fr); }
+        @media (max-width: 769px) {
+          .addMoneyModal__box__steps--text {
+            margin: 0 auto 12% auto;
+            width: 90%; } }
         .addMoneyModal__box__steps--text p {
           color: var(--really-light-gray);
           text-align: center; }
@@ -1196,10 +1383,16 @@ b {
       font-size: 30px;
       padding: 0 4% 2% 4%;
       transition: opacity .5s ease-in-out; }
+      @media (max-width: 769px) {
+        .addMoneyModal__box h1 {
+          padding: 3% 4% 2% 4%; } }
     .addMoneyModal__box__cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 5%; }
+      @media (max-width: 769px) {
+        .addMoneyModal__box__cards {
+          grid-template-columns: 1fr; } }
       .addMoneyModal__box__cards input {
         display: none; }
       .addMoneyModal__box__cards input[type=radio]:checked + label {
@@ -1211,6 +1404,11 @@ b {
         border-radius: 10px;
         padding: 30% 0;
         position: relative; }
+        @media (max-width: 769px) {
+          .addMoneyModal__box__cards label {
+            padding: 9% 20%;
+            margin: 2% auto;
+            border-radius: 6px; } }
         .addMoneyModal__box__cards label span {
           position: absolute;
           top: 50%;
@@ -1219,6 +1417,9 @@ b {
           font-size: 35px;
           font-weight: 600;
           color: #acacac; }
+          @media (max-width: 769px) {
+            .addMoneyModal__box__cards label span {
+              font-size: 20px; } }
         .addMoneyModal__box__cards label:hover {
           transform: scale(1.1); }
       .addMoneyModal__box__cards--another {
@@ -1227,11 +1428,17 @@ b {
         text-decoration: underline;
         cursor: pointer;
         color: var(--really-light-gray); }
+        @media (max-width: 769px) {
+          .addMoneyModal__box__cards--another {
+            font-size: 15px; } }
     .addMoneyModal__box button {
       margin-top: 4%;
       font-size: 25px;
       padding: 2% 10%;
       border-radius: 6px; }
+      @media (max-width: 769px) {
+        .addMoneyModal__box button {
+          font-size: 17px; } }
   .addMoneyModal .step2 .step_box_1 {
     visibility: hidden;
     opacity: 0; }
@@ -1281,7 +1488,6 @@ b {
     transform: translateX(-100%);
     display: none; } }
 .loading {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1574,7 +1780,7 @@ b {
       border-right: 1px solid gray; }
       @media (max-width: 769px) {
         .footer__top__social {
-          padding: 7% 15%;
+          padding: 7% 25%;
           border-right: none;
           border-bottom: 1px solid gray; } }
       .footer__top__social img {
@@ -1588,7 +1794,7 @@ b {
       grid-column-gap: 4%; }
       @media (max-width: 769px) {
         .footer__top__payment {
-          padding: 5% 0;
+          padding: 5% 5%;
           grid-template-columns: repeat(3, 1fr); } }
     .footer__top img {
       opacity: 0.7;
@@ -1607,6 +1813,9 @@ b {
     .footer__main__logo {
       padding: 0 15% 5% 15%;
       margin: auto; }
+      @media (max-width: 769px) {
+        .footer__main__logo {
+          padding: 0 25% 5% 25%; } }
     .footer__main__menu {
       padding: 5%; }
       @media (max-width: 769px) {
