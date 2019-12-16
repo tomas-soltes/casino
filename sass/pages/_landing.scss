@@ -363,7 +363,6 @@
 }
 
 .spinning_wheel {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -373,13 +372,18 @@
   z-index: 20;
   transition: all .3s ease-in-out;
 
-  img {
+  .wheel_img {
     position: absolute;
     left: -15%;
     bottom: -30%;
     width: 60%;
     z-index: 1;
     transform: rotate(45deg);
+    transition: all 2s ease-in-out;
+  }
+
+  #wheel_rotate{
+    transform-origin: center;
     transition: all 2s ease-in-out;
   }
 

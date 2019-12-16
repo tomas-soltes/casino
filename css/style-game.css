@@ -1,28 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Impact";
-
-}
 :root {
   --ballSpin: 0deg;
 }
 
 .game-container {
-  position: relative;
-  width: 1000px;
-  height: 600px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: #f9f9f9;
   margin: 0 auto;
-  margin-top: 80px;
   overflow: hidden;
+  font-family: "Impact";
   background: url('../img/table.png');
   background-position: center;
   background-size: cover;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease-in-out;
 }
 
 .deck-container {
@@ -37,7 +33,6 @@ body {
   left: 5%;
   top: 10%;
   width: 12%;
-
 }
 
 .balance-heading {
@@ -212,10 +207,11 @@ body {
 .machine-container{
   z-index: 101;
   position:absolute;
-  width:500px;
-  height:500px;
+  width:40vw;
+  height:40vw;
   bottom:-30%;
   left:-20%;
+  transform: translate(0,0);
   transition: all 0.7s ease;
   transform-origin: center;
 }
@@ -239,10 +235,11 @@ left:0;
 width:100%;
 }
 .machine-reveal{
-  width:500px;
-  height:500px;
-  bottom:10%;
-  left:25%;
+  width:45vw;
+  height:45vw;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 .machine-reveal .ball-container{
  display:block;

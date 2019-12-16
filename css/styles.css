@@ -109,11 +109,15 @@ img {
   height: 32px;
   opacity: 0.3;
   transition: all .3s ease;
+  z-index: 9999;
   cursor: pointer; }
   @media (max-width: 769px) {
     .close {
       right: 30px;
       top: 30px; } }
+
+.close.gold:before, .close.gold:after {
+  background-color: var(--primary-color); }
 
 .close:hover {
   opacity: .9; }
@@ -126,7 +130,8 @@ img {
   height: 33px;
   width: 3px;
   border-radius: 1.5px;
-  background-color: #333; }
+  background-color: #333;
+  z-index: 9999; }
 
 .close:before {
   transform: rotate(45deg); }
@@ -437,7 +442,6 @@ b {
   color: red; }
 
 .spinning_wheel {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -446,13 +450,16 @@ b {
   overflow: hidden;
   z-index: 20;
   transition: all .3s ease-in-out; }
-  .spinning_wheel img {
+  .spinning_wheel .wheel_img {
     position: absolute;
     left: -15%;
     bottom: -30%;
     width: 60%;
     z-index: 1;
     transform: rotate(45deg);
+    transition: all 2s ease-in-out; }
+  .spinning_wheel #wheel_rotate {
+    transform-origin: center;
     transition: all 2s ease-in-out; }
   .spinning_wheel__text--win, .spinning_wheel__text--spin {
     position: absolute;
@@ -686,19 +693,19 @@ b {
       padding: 8%;
       border-radius: 15px; }
       .header.logged_in .header__text h1 p:nth-child(1) {
-        font-size: 70px;
+        font-size: 60px;
         font-weight: 600; }
         @media (max-width: 769px) {
           .header.logged_in .header__text h1 p:nth-child(1) {
             font-size: 40px; } }
       .header.logged_in .header__text h1 p:nth-child(2) {
-        font-size: 90px;
+        font-size: 80px;
         font-weight: 700; }
         @media (max-width: 769px) {
           .header.logged_in .header__text h1 p:nth-child(2) {
             font-size: 50px; } }
       .header.logged_in .header__text h1 p:nth-child(3) {
-        font-size: 50px;
+        font-size: 40px;
         opacity: 0.7; }
         @media (max-width: 769px) {
           .header.logged_in .header__text h1 p:nth-child(3) {
@@ -1461,8 +1468,10 @@ b {
           color: var(--font-color); } }
   .nav__account {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    justify-items: end; }
+    grid-template-columns: 1fr 1.5fr; }
+    @media (max-width: 769px) {
+      .nav__account {
+        justify-items: end; } }
     .nav__account a {
       background-color: transparent;
       display: grid;

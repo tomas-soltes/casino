@@ -206,6 +206,16 @@ function goBackToStep2() {
   document.querySelector('.addMoneyModal__box').classList.remove('step3');
 }
 
+function openGame(){
+  document.querySelector('.game-container').style.visibility = "visible";
+  document.querySelector('.game-container').style.opacity = "1";
+}
+
+function closeGame(){
+  document.querySelector('.game-container').style.visibility = "hidden";
+  document.querySelector('.game-container').style.opacity = "0";
+}
+
 
 function addSlash() {
   if (exp.value.length == 2) {

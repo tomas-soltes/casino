@@ -198,7 +198,9 @@
     &__account {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
+        @include tablet {
         justify-items: end;
+        }
 
         a {
             background-color: transparent;

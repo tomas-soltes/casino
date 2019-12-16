@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/etw4fag.css">
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style-game.css" />
     <title>Casino 777 - Games</title>
 </head>
 
@@ -59,7 +60,7 @@
                     <p>UP TO $100</p>
                     <p>FOR NEW USERS</p>
                 </h1>
-                <button class="playRoulette">PLAY NOW</button>
+                <!-- <a href="game.html"> --><button onclick="openGame()" class="playRoulette">PLAY NOW</button><!-- </a> -->
             </div>
         </section>
 
@@ -150,6 +151,43 @@
         </div>
     </section>
 
+
+    <div class="game-container">
+            <div class="deck-container"></div>
+            <div class="chip-container"></div>
+            <div class="machine-container">
+              <img src="img/roulette-border.png" alt="" class="machine-border">
+                <div class="moving-container">
+                <div class="wheel-container"></div>
+                <div class="ball-container"></div>
+            </div>
+            </div>
+            <div class="balance-container">
+                <h2 class="balance-heading">BALANCE</h2>
+                <h2 class="balance-amount">1000$</h2>
+                <div class="balance-divide"></div>
+                <h3 class="balance-table">ON TABLE</h3>
+                <h3 class="balance-table-amount">0$</h3>
+            </div>
+            <div class="button-container">
+                <div class="button button-spin">
+                    <img src="svg/icon-spin.svg" alt="">
+                    <p>SPIN</p>
+                </div>
+                <div class="button">
+                        <img src="svg/icon-x.svg" alt="">
+                        <p>CLEAR</p>
+                    </div>
+            </div>
+            <div class="win-number-container"><h2 class="win-number-title"></h2>
+                <h2 class="win-number-number"></h2>
+            <ul></ul></div>
+        <div class="you-win"><h1>You Win!</h1>
+        <p>+250 €</p></div>
+    <div class="dark-overlay"></div>
+    <div onclick="closeGame()" class="close gold"></div>
+        </div>
+        
     <section class="addMoneyModal">
         <div onclick="closeAddMoneyModal()" class="filter filter__addMoney"></div>
         <div class="addMoneyModal__box">
@@ -424,5 +462,6 @@
 
 <script src="scripts/dashboard.js"></script>
 <script src="scripts/main.js"></script>
+<script src="scripts/game.js"></script>
 
 </html>

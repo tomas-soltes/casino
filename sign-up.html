@@ -171,7 +171,8 @@
 
     <section class="spinning_wheel goDown">
         <div class="filter filter--spin"></div>
-        <img class="wheel_img" src="img/wheel.svg" alt="Spinning wheel">
+        <div class="wheel_img"></div>
+       <!--  <img class="wheel_img" src="img/wheel.svg" alt="Spinning wheel"> -->
         <div class="spinning_wheel__text--spin">
             <h3>Welcome bonus for new users</h3>
             <h1>SPIN THE WHEEL</h1>
@@ -180,7 +181,7 @@
             <form class="form-spin">
                 <label for="email-spin">Enter your email address to receive your winnings.</label>
                 <input class="email-spin" type="email" name="email" placeholder="E-mail" required></input>
-                <input class="spinBtn" id="spinBtn" type="submit" value="SPIN!">
+                <input onclick="spinWheel()" class="spinBtn" id="spinBtn" type="submit" value="SPIN!">
             </form>
         </div>
 

@@ -27,7 +27,7 @@
       border-radius: 15px;
 
       p:nth-child(1) {
-        font-size: 70px;
+        font-size: 60px;
         font-weight: 600;
 
         @include tablet {
@@ -36,7 +36,7 @@
       }
 
       p:nth-child(2) {
-        font-size: 90px;
+        font-size: 80px;
         font-weight: 700;
 
         @include tablet {
@@ -45,7 +45,7 @@
       }
 
       p:nth-child(3) {
-        font-size: 50px;
+        font-size: 40px;
         opacity: 0.7;
 
         @include tablet {

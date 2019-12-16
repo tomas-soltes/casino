@@ -324,6 +324,14 @@ function createUserList(data) {
     }
 }
 
+    // FETCH OF ROULETTE AND BALL
+    fetch('img/wheel2.svg')
+        .then(r => r.text())
+        .then(text => {
+            document.querySelector(".wheel_img").innerHTML = text;
+
+        });
+
 //SIGN UP FORM
 function openLoginForgot() {
     console.log("wrong");
@@ -365,9 +373,15 @@ document.getElementById("signUpAfterSpin").addEventListener("click", signUpAfter
 
 let win,winPrices;
 function spinWheel() {
-    document.querySelector(".wheel_img").style.transform = "rotate(765deg)";
-    winPrices = [100,200,300,400,500,700,800,1000];
-    win = winPrices[Math.floor(Math.random()*winPrices.length)];
+    randomIndex = [1,2,3,4,5,6,7,8];
+    winPrices = [100,800,300,700,500,200,400,1000];
+    rotateIndex = randomIndex[Math.floor(Math.random()*randomIndex.length-1)];
+    win = winPrices[rotateIndex];
+    console.log(rotateIndex);
+    
+    let rotateDeg = rotateIndex*45 + 22;
+    document.getElementById("wheel_rotate").style.transform = "rotate(" + rotateDeg + "deg)";;
+
     document.querySelector(".wheel_img").addEventListener('transitionend', () => {
         document.querySelector(".spinning_wheel__text--spin").classList.add('scaleDown');
         document.querySelector(".spinning_wheel__text--win").classList.add('scaleUp');
