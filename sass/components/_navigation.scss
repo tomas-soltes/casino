@@ -52,7 +52,7 @@
         grid-column-gap: 3%;
 
         @include tablet {
-            padding: 2% 5%;
+            padding: 2% 6%;
             grid-template-columns: 25% 30% 25%;
             grid-column-gap: 10%;
         }

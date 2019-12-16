@@ -53,12 +53,13 @@ label {
 
 textarea,
 input.text,
+input[type="email"],
+input[type="password"],
 input[type="text"],
 input[type="button"],
-input[type="submit"],
-.input-checkbox {
+input[type="submit"] {
   -webkit-appearance: none;
-  border-radius: 0; }
+  border-radius: 5px; }
 
 button {
   background-color: var(--primary-color);
@@ -1599,7 +1600,7 @@ b {
     grid-column-gap: 3%; }
     @media (max-width: 769px) {
       .nav.logged_in {
-        padding: 2% 5%;
+        padding: 2% 6%;
         grid-template-columns: 25% 30% 25%;
         grid-column-gap: 10%; } }
   .nav a {
@@ -1720,12 +1721,13 @@ b {
       font-size: 22px; }
 
 .nav__mobile--hamburger {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   transition-duration: 0.3s;
   cursor: pointer;
   z-index: 20;
-  position: relative; }
+  position: relative;
+  align-self: center; }
   .nav__mobile--hamburger span,
   .nav__mobile--hamburger span:before,
   .nav__mobile--hamburger span:after {

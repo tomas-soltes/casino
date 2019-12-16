@@ -154,6 +154,7 @@ function removeAll() {
 }
 
 window.addEventListener("click", goNextStep);
+window.addEventListener('touchmove', goNextStep, {passive: false});
 
 function goNextStep() {
   let myAccountActive = document.querySelector("body").classList.contains('onboarding--myAccount');

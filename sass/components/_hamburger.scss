@@ -1,12 +1,13 @@
 .nav__mobile {
 
   &--hamburger {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     transition-duration: 0.3s;
     cursor: pointer;
     z-index: 20;
     position: relative;
+    align-self: center;
 
     span,
     span:before,
