@@ -51,6 +51,15 @@ label {
   border: none;
   transition: all .3s ease-in-out; }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
 button {
   background-color: var(--primary-color);
   color: white;
@@ -199,6 +208,7 @@ b {
 .header {
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-image: url("../img/background-landing.jpg");
   background-size: cover;
   position: relative; }
@@ -271,6 +281,7 @@ b {
       align-content: center;
       justify-items: center; }
       .basic_info__grid_item__img img {
+        align-self: center;
         margin: 2% 3%;
         width: 70px; }
       .basic_info__grid_item__img h2 {
@@ -369,6 +380,7 @@ b {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.363);
   z-index: -1; }
@@ -382,6 +394,7 @@ b {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   z-index: 20;
   transition: all .2s ease;
@@ -464,6 +477,7 @@ b {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   z-index: 20;
   transition: all .3s ease-in-out; }
@@ -811,6 +825,7 @@ b {
   .onboarding .onboarding_flow {
     width: 100vw;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     z-index: 20;
     transition: all .3s ease-in-out;
@@ -1050,6 +1065,7 @@ b {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   z-index: 20;
   transition: all .2s ease;
@@ -1493,6 +1509,7 @@ b {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   background: #1f1f1f;
   z-index: 999;

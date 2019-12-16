@@ -45,6 +45,17 @@ label {
     transition: all .3s ease-in-out;
 }
 
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+-webkit-appearance: none;
+border-radius: 0;
+}
+
 button {
     background-color: var(--primary-color);
     color: white;
