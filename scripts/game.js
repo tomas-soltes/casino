@@ -1,7 +1,3 @@
-// ROULETTE RULES
-// Numbers 1-36 + 0
-// If Number is right => 35 * bet
-
 let bets = [];
 let credit = 1000;
 let onTable = 0;
@@ -149,8 +145,14 @@ function play() {
         document.querySelector(".win-number-number").textContent = wNumber.number;
         findWin(wNumber, bets);
 
-        youWin.classList.add("you-win-active")
-        youWin.querySelector("p").textContent = totalWin + " €";
+        youWin.classList.add("you-win-active");
+        if (totalWin > 0){
+            youWin.querySelector("p").textContent = totalWin + " €";
+        }else {
+            youWin.querySelector("h1").textContent ="You lose";
+            youWin.querySelector("p").textContent = " ";
+        }
+     
     }, 12000);
 
     setTimeout(function () {
@@ -177,7 +179,7 @@ function machineInit(wNumber) {
     // SET DEGREE OF ROTATION
     let NumberIndex = wheelN.indexOf(wNumber);
     console.log(NumberIndex);
- 
+
     ballRotateDeg = 1440 + NumberIndex * 10;
     let root = document.documentElement;
     root.style.setProperty('--ballSpin', ballRotateDeg + "deg");
@@ -187,15 +189,16 @@ function machineInit(wNumber) {
     machineContainer.classList.add("machine-reveal");
 
     setTimeout(function () {
-
+        var machineSound = new Audio('sound/roulette-sound.mp3');
+        machineSound.play();
         movingContainer.classList.add("machine-animation");
         ballContainer.classList.add("ball-animation");
     }, 2000)
     setTimeout(function () {
-
         machineContainer.classList.remove("machine-reveal");
         movingContainer.classList.remove("machine-animation");
         ballContainer.classList.remove("ball-animation");
+        overlay.classList.remove("dark-overlay-active")
     }, 12000)
 
 
@@ -204,8 +207,6 @@ function machineInit(wNumber) {
 function findWin(wNumber, bets) {
     // get properties for w Number
     wNumber = numberProperties(wNumber);
-    console.log(bets);
-    console.log(wNumber);
     // compare w/ bet numbers
     for (i = 0; i < bets.length; i++) {
         if (bets[i].type == "number") {
@@ -215,20 +216,14 @@ function findWin(wNumber, bets) {
             }
         }
         if (bets[i].type == "special") {
-            console.log("special is evaluating");
             let specialType = bets[i].specialType
-            console.log(specialType);
             if (wNumber.special[specialType] == true) {
-                console.log(specialType + "special is right");
                 amount = bets[i].amount * wPayouts[specialType];
                 creditUpdate("plus", amount)
             }
         }
     }
-    console.log(bets);
-    // calculate win amounts on true matches
 
-    // calculate total win
 
 }
 
@@ -295,7 +290,7 @@ function deckSetup() {
         let numberContainer = deckContainer.querySelector("#Numbers-group");
         numberContainer.querySelector("#number-field").setAttribute("data-name", "number-field"); // ILLUSTRATOR NAMING FIX
         numberContainer.querySelector("#chip").setAttribute("data-name", "chip"); // ILLUSTRATOR NAMING FIX
-        let deckNumbers = deckContainer.querySelectorAll('#Numbers-group [data-name="number-field"]'); 
+        let deckNumbers = deckContainer.querySelectorAll('#Numbers-group [data-name="number-field"]');
         deckNumbers.forEach(deckNumber => {
             let deckChips = deckNumber.querySelector('g [data-name="chip"]');
             deckChips.classList.add("chip");
@@ -325,20 +320,15 @@ function deckSetup() {
     }
 
     function deckBet(number, type) {
+        var ChipSound = new Audio('sound/chip-sound.mp3');
+        ChipSound.play();
         let selectedChipObj = {};
         selectedChipObj = findChip();
         let selectedChip = selectedChipObj.number;
-        console.log(selectedChipObj.color);
+
 
         // UI UPDATE
-       let chipTest = deckContainer.querySelector('#chip-' + number.target.parentElement.id).childNodes[3].childNodes[1].setAttribute("style", "fill:  rgb(198, 6, 20)")//.nextSibling.firstChild.style.fill //.firstElementChild.style.fill = selectedChipObj.color;
- console.log(chipTest);
-       console.log("toto je objekt hodnota " + selectedChipObj.color);
-       console.log("toto je css style hodnota " + chipTest);
-        //chipTest = selectedChipObj.color;
-        
-        console.log("toto ma byt hodnota style po zmene " + chipTest);
-
+        deckContainer.querySelector('#chip-' + number.target.parentElement.id).childNodes[3].childNodes[1].setAttribute("style", "fill:" + selectedChipObj.color);
         deckContainer.querySelector('#chip-' + number.target.parentElement.id + " text").innerHTML = selectedChip;
         deckContainer.querySelector('#chip-' + number.target.parentElement.id).style.display = "block";
 
@@ -402,7 +392,7 @@ function deckSetup() {
 function findChip() {
     // GET WHICH CHIP IS SELECTED AND SEND IT ALONG WITH COLORS
     let selectedAmountObj = {};
-   
+
     let selectChips = document.querySelector(".chip-container").querySelectorAll('[id*="Select"]');
     selectChips.forEach(singleChip => {
         if (singleChip.classList.contains("chip-selected")) {

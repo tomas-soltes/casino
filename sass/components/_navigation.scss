@@ -49,8 +49,7 @@
     }
 
     &.logged_in {
-        grid-template-columns: 10% 59% 25%;
-        grid-column-gap: 3%;
+        grid-template-columns: minmax(10%, max-content) 1fr minmax(25%, max-content);
 
         @include tablet {
             padding: 2% 6%;
@@ -177,6 +176,10 @@
 
         a {
             padding: 3%;
+
+            @include small-desktop {
+                padding: 4% 1%;
+            }
         }
 
         li {
@@ -203,6 +206,7 @@
         justify-items: end;
         }
 
+
         a {
             background-color: transparent;
             display: grid;
@@ -221,6 +225,7 @@
                 font-size: 18px;
                 margin: auto 0;
                 transition: all .3s ease;
+                word-break: none;
 
                 @include tablet {
                     display: none;

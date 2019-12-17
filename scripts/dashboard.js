@@ -153,10 +153,35 @@ function removeAll() {
   });
 }
 
-document.addEventListener("click", goNextStep);
+ document.querySelector('.onboarding_flow').addEventListener("click", checkListener); 
 /* document.addEventListener('touchmove', goNextStep);
 document.addEventListener('touchstart', goNextStep);
  */
+
+
+ function checkListener(event) {
+  console.log(event.target);
+
+  let liButtons = document.querySelectorAll('.onboarding_flow__box--steps li');
+  isLiButton = false;
+
+  for (i = 0; i < liButtons.length; i++) {
+    if (event.target == liButtons[i]) {
+      isLiButton = true;
+    } else {
+    }
+  }
+
+  if (isLiButton) {
+    console.log("li");
+  } else {
+    console.log("goNextStep");
+
+    goNextStep();
+  }
+} 
+
+
 function goNextStep() {
   let myAccountActive = document.querySelector("body").classList.contains('onboarding--myAccount');
   let myBalanceActive = document.querySelector("body").classList.contains('onboarding--myBalance');
@@ -178,14 +203,11 @@ function goNextStep() {
 
 let jackpot = 114;
 addJackpot();
+
 function addJackpot() {
   jackpot = jackpot + 4;
-    console.log(jackpot);
-    document.querySelector('.progressive_jackpot').textContent = "$7,136," + jackpot;
-    setTimeout(function () {
-      addJackpot();
-    }, 1000);
+  document.querySelector('.progressive_jackpot').textContent = "$7,136," + jackpot;
+  setTimeout(function () {
+    addJackpot();
+  }, 1000);
 }
-
-
-

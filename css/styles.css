@@ -1660,8 +1660,7 @@ b {
     transform: translateX(0);
     visibility: visible; }
   .nav.logged_in {
-    grid-template-columns: 10% 59% 25%;
-    grid-column-gap: 3%; }
+    grid-template-columns: minmax(10%, max-content) 1fr minmax(25%, max-content); }
     @media (max-width: 769px) {
       .nav.logged_in {
         padding: 2% 6%;
@@ -1741,6 +1740,9 @@ b {
         transform: translateX(-100%); } }
     .nav__menu a {
       padding: 3%; }
+      @media (max-width: 1100px) {
+        .nav__menu a {
+          padding: 4% 1%; } }
     .nav__menu li {
       text-align: center;
       padding: 3%;
@@ -1775,7 +1777,8 @@ b {
         font-weight: 600;
         font-size: 18px;
         margin: auto 0;
-        transition: all .3s ease; }
+        transition: all .3s ease;
+        word-break: none; }
         @media (max-width: 769px) {
           .nav__account a p {
             display: none; } }

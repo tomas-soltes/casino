@@ -24,7 +24,7 @@
 .deck-container {
   position: absolute;
   width: 70%;
-  right: 5%;
+  right: 100px;
   top: 5%;
 }
 
@@ -32,7 +32,8 @@
   position: absolute;
   left: 5%;
   top: 10%;
-  width: 12%;
+
+
 }
 
 .balance-heading {
@@ -85,9 +86,10 @@
   width: 23%;
   overflow: auto;
 }
-.chip-selected{
+
+.chip-selected {
   transform: translateY(-20px);
-  
+
 }
 
 
@@ -139,6 +141,7 @@
 .deck-container svg {
   width: 100%;
   z-index: 20;
+  cursor: pointer;
 }
 
 .win-number-container {
@@ -155,54 +158,64 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.dark-overlay{
-  position:absolute;
-  z-index:-100;
-  width:100%;
-  height:100%;
- transition: background-color 0.2s;
-}
-.dark-overlay-active{
-  z-index: 100;
-  background-color: rgba(0,0,0,0.5);
-}
-.you-win{
-  text-align: center;
-  z-index:101;
+
+.dark-overlay {
   position: absolute;
-  top:50%;
-  left:50%;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.2s;
+}
+
+.dark-overlay-active {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.you-win {
+  text-align: center;
+  z-index: 101;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transition: transform 0.5s;
-  transform:translate(-50%,-50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
 }
-.you-win-active{
-  transform: translate(-50%,-50%) scale(1);
+
+.you-win-active {
+  transform: translate(-50%, -50%) scale(1);
 }
-.red{
+
+.red {
   fill: rgb(198, 6, 20) !important;
 }
-.you-win h1{
-  font-size:80px;
+
+.you-win h1 {
+  font-size: 80px;
   background: -webkit-linear-gradient(90deg, #A86A18 44%, #FADB6E 53%, #FFFFFF 75%, #F5E5BB 85%, #E0AD2A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.you-win p{
-  font-size:50px;
-  color: #A1F779; 
+
+.you-win p {
+  font-size: 50px;
+  color: #A1F779;
 }
+
 .win-number-number {
   font-size: 32px;
   margin-left: 20px;
   display: inline-block;
   color: white;
 }
-.machine-border{
-  position:absolute;
-  left:0%;
-  top:0%;
-  width:100%;
+
+.machine-border {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
 }
+
 
 .machine-container{
   z-index: 101;
@@ -245,62 +258,132 @@ width:100%;
  display:block;
 }
 
+.ball-animation {
+  animation: ball-c 7s cubic-bezier(0, 0, .15, .99) forwards;
+}
 
-.ball-animation{
-  animation: ball-c 7s cubic-bezier(0,0,.15,.99) forwards;
+.ball-animation svg {
+  animation: ball 10s cubic-bezier(0, 0, .15, .99) forwards;
 }
-.ball-animation svg{
-  animation: ball 10s cubic-bezier(0,0,.15,.99) forwards;
-}
-.machine-animation{
-  animation: machine 13s cubic-bezier(0,0,.15,.99) forwards;
+
+.machine-animation {
+  animation: machine 13s cubic-bezier(0, 0, .15, .99) forwards;
 }
 
 @keyframes ball-c {
   0% {
     transform: rotate(0deg);
   }
+
   78% {
     transform: rotate(var(--ballSpin));
   }
-  100%{
+
+  100% {
     transform: rotate(var(--ballSpin));
   }
 }
-@keyframes ball{
-  0%{
+
+@keyframes ball {
+  0% {
     transform: translateY(0);
   }
-  48%{
-    transform: translateY(30px);
-   }
- 50%{
-  transform: translateY(50px);
- }
- 58%{
-  transform: translateY(80px);
- }
- 70%{
-  transform: translateY(100px);
- }
- 
-  100%{
-    transform: translateY(100px);
+
+  48% {
+    transform: translateY(2vw);
+  }
+
+  50% {
+    transform: translateY(4vw);
+  }
+
+  58% {
+    transform: translateY(6vw);
+  }
+
+  70% {
+    transform: translateY(8vw);
+  }
+
+  100% {
+    transform: translateY(9.5vw);
   }
 }
-@keyframes machine{
-  0%{
+
+@keyframes machine {
+  0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-1080deg);
   }
 }
-@keyframes machine-opposite{
-  0%{
+
+@keyframes machine-opposite {
+  0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(1080deg);
   }
 }
+
+.mobile-overlay {
+  display: none;
+
+
+}
+.mobile-overlay h1{
+  margin-top:80px;
+  color:white;
+  opacity:0.9;
+  font-size:45px;
+  text-align: center;
+}
+
+@media screen and (max-device-width: 800px) and (orientation : portrait) {
+  .mobile-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2000;
+  }
+  .machine-container{
+    
+    /* transform: scale(0.7) translate(-20%,40%); */
+  }
+}
+
+@media screen and (max-device-width: 1200px) and (orientation : landscape) {
+  .deck-container{width:50%;}
+  .button-container{transform:scale(0.7);
+  bottom:5%;
+  right:5%;}
+  .chip-container{
+    width:15%;
+    left:50%;
+  }
+  .win-number-container{
+    transform: scale(0.7);
+    left:40%;
+  }
+  .machine-container{
+    
+    /* transform: scale(0.8) translate(0%,30%); */
+  }
+
+}
+
+
+/* @media screen and (max-device-width: 900px) and (orientation : landscape) {
+  .machine-container{
+    
+    transform: scale(0.6) translate(-20%,40%);
+  }
+} */
