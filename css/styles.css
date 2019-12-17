@@ -433,7 +433,8 @@ b {
       margin: 5% auto;
       padding: 2% 4%;
       font-size: 26px;
-      text-align: center; }
+      text-align: center;
+      word-break: none; }
       @media (max-width: 769px) {
         .school_project div button {
           margin: 15% auto;
