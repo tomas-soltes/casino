@@ -115,3 +115,19 @@ window.addEventListener("resize", () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
+
+function moneyGold(){
+    document.getElementById('moneyIcon').src = "img/icons/money-gold.png";
+}
+
+function accountGold(){
+    document.getElementById('accountIcon').src = "img/icons/account-gold.png";
+}
+
+function moneyWhite(){
+    document.getElementById('moneyIcon').src = "img/icons/money.png";
+}
+
+function accountWhite(){
+    document.getElementById('accountIcon').src = "img/icons/account.png";
+}

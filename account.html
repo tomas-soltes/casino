@@ -41,11 +41,13 @@
         </ul>
 
         <div class="nav__account">
-            <a onclick="addMoney()" class="addMoney"><img src="img/icons/moeny.png" alt="icon">
+            <a onclick="addMoney()" onmouseover="moneyGold()" onmouseout="moneyWhite()" class="addMoney"><img
+                    id="moneyIcon" src="img/icons/money.png" alt="icon">
                 <p>0$</p>
             </a>
-            <a href="account.html" class="myAccount"><img src="img/icons/account.png" alt="icon">
-                <p>My Account</p>
+            <a href="account.html" class="myAccount"><img
+                    id="accountIcon" src="img/icons/account-gold.png" alt="icon">
+                <p class="colorGold">My Account</p>
             </a>
 
         </div>

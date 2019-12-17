@@ -213,7 +213,7 @@
   }
 
   &__games {
-    padding: 0 5% 5% 5%;
+    padding: 0 6% 6% 6%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
@@ -223,7 +223,7 @@
     }
 
     img {
-      padding: 5%;
+      padding: 7%;
       transition: all 0.3s ease;
       cursor: pointer;
     }
@@ -542,7 +542,7 @@
 
         input[type=submit] {
           margin-top: 4%;
-          padding: 4% 6%;
+          padding: 2% 6%;
           font-size: 35px;
 
           @include tablet {

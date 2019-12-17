@@ -10,6 +10,7 @@
     font-size: 17px;
     background-color: var(--background-color);
     z-index: 10;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
 
     &.landing {
         grid-template-columns: 10% 50%;
@@ -225,6 +226,10 @@
                     display: none;
                 }
             }
+
+            p.colorGold{
+                color: var(--primary-color);
+            }
         }
 
         a:hover {
@@ -238,5 +243,6 @@
                 font-size: 22px;
             }
         }
+
     }
 }

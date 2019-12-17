@@ -166,12 +166,12 @@ function createUserList(data) {
 
         //GET INPUT VALUES AND STORE THEM IN USER OBJECT
         if (!emailInUse) {
-   
+
             let newBalance;
             if (usedForm == formSignUp) {
                 newBalance = 0;
                 console.log(newBalance);
-                
+
             } else {
                 newBalance = win;
                 console.log(newBalance);
@@ -268,7 +268,7 @@ function createUserList(data) {
                 let sId = loggedUser.id;
                 //CREATE SESSION CONTAINING ID OF LOGED IN USER
                 writeCookie("sessionId", sId, 1);
-                
+
                 //REDIRECT TO DASHBOARD
                 window.location.href = "index.html";
             } else {
@@ -324,13 +324,13 @@ function createUserList(data) {
     }
 }
 
-    // FETCH OF ROULETTE AND BALL
-    fetch('img/wheel2.svg')
-        .then(r => r.text())
-        .then(text => {
-            document.querySelector(".wheel_img").innerHTML = text;
+// FETCH OF ROULETTE AND BALL
+fetch('img/wheel2.svg')
+    .then(r => r.text())
+    .then(text => {
+        document.querySelector(".wheel_img").innerHTML = text;
 
-        });
+    });
 
 //SIGN UP FORM
 function openLoginForgot() {
@@ -371,26 +371,30 @@ document.getElementById("closeSpinningWheel").addEventListener("click", closeSpi
 document.getElementById("openSpinningWheel").addEventListener("click", openSpinningWheel);
 document.getElementById("signUpAfterSpin").addEventListener("click", signUpAfterSpin);
 
-let win,winPrices;
+let win, winPrices;
+
 function spinWheel() {
-    randomIndex = [1,2,3,4,5,6,7,8];
-    winPrices = [100,800,300,700,500,200,400,1000];
-    rotateIndex = randomIndex[Math.floor(Math.random()*randomIndex.length-1)];
+    randomIndex = [1, 2, 3, 4, 5, 6, 7, 8];
+    winPrices = [100, 800, 300, 700, 500, 200, 400, 1000];
+    rotateIndex = randomIndex[Math.floor(Math.random() * randomIndex.length - 1)];
     win = winPrices[rotateIndex];
     console.log(rotateIndex);
-    
-    let rotateDeg = rotateIndex*45 + 360 + 22;
+
+    let rotateDeg = rotateIndex * 45 + 360 + 22;
     document.getElementById("wheel_rotate").style.transform = "rotate(" + rotateDeg + "deg)";;
 
     document.querySelector(".wheel_img").addEventListener('transitionend', () => {
-        setTimeout(function() {
+        setTimeout(function () {
             document.querySelector(".spinning_wheel__text--spin").classList.add('scaleDown');
-        document.querySelector(".spinning_wheel__text--win").classList.add('scaleUp');
-        document.querySelector(".wheel_img").style.display = "none";
-        document.querySelector(".won").textContent = "$" + win;
+            document.querySelector(".spinning_wheel__text--win").classList.add('scaleUp');
+            document.querySelector(".won").textContent = "$" + win;
+            document.querySelector(".email-spin-fill").value = document.querySelector(".email-spin").value;
 
-        document.querySelector(".email-spin-fill").value = document.querySelector(".email-spin").value;
-          }, 800);
+            var mqTablet = window.matchMedia("(max-width: 769px)");
+            if (mqTablet.matches) {
+                document.querySelector(".wheel_img").style.display = "none";
+            }
+        }, 800);
     });
 }
 
@@ -423,7 +427,20 @@ document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 // We listen to the resize event
 window.addEventListener("resize", () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
+
+
+let jackpot = 114;
+addJackpot();
+function addJackpot() {
+  jackpot = jackpot + 4;
+    console.log(jackpot);
+    document.querySelector('.progressive_jackpot').textContent = "$7,136," + jackpot;
+    setTimeout(function () {
+      addJackpot();
+    }, 1000);
+}
+

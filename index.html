@@ -42,10 +42,12 @@
         </ul>
 
         <div class="nav__account">
-            <a onclick="addMoney()" class="addMoney"><img src="img/icons/moeny.png" alt="icon">
+            <a onclick="addMoney()" onmouseover="moneyGold()" onmouseout="moneyWhite()" class="addMoney"><img id="moneyIcon" src="img/icons/money.png"
+                    alt="icon">
                 <p>0$</p>
             </a>
-            <a href="account.html" class="myAccount"><img src="img/icons/account.png" alt="icon">
+            <a href="account.html" onmouseover="accountGold()" onmouseout="accountWhite()"  class="myAccount"><img id="accountIcon" src="img/icons/account.png"
+                    alt="icon">
                 <p>My Account</p>
             </a>
 
@@ -76,39 +78,32 @@
                 </ul>
             </div>
             <div class="games_showcase__games">
-                <img src="img/games/1.png" alt="game" />
+                <img onclick="openGame()" src="img/games/1.png" alt="game" />
                 <img src="img/games/2.png" alt="game" />
                 <img src="img/games/3.png" alt="game" />
                 <img src="img/games/4.png" alt="game" />
+
                 <img src="img/games/5.png" alt="game" />
                 <img src="img/games/6.png" alt="game" />
                 <img src="img/games/7.png" alt="game" />
                 <img src="img/games/8.png" alt="game" />
 
-                <img src="img/games/1.png" alt="game" />
-                <img src="img/games/2.png" alt="game" />
-                <img src="img/games/3.png" alt="game" />
-                <img src="img/games/4.png" alt="game" />
-                <img src="img/games/5.png" alt="game" />
-                <img src="img/games/6.png" alt="game" />
-                <img src="img/games/7.png" alt="game" />
-                <img src="img/games/8.png" alt="game" />
-
-                <!-- <img src="img/games/9.png" alt="game">
+                <img src="img/games/9.png" alt="game">
                 <img src="img/games/10.png" alt="game">
                 <img src="img/games/11.png" alt="game">
                 <img src="img/games/12.png" alt="game">
+
                 <img src="img/games/13.png" alt="game">
                 <img src="img/games/14.png" alt="game">
                 <img src="img/games/15.png" alt="game">
-                <img src="img/games/16.png" alt="game"> -->
+                <img src="img/games/16.png" alt="game">
             </div>
         </section>
 
         <section class="jackpot">
             <div class="jackpot__text">
                 <h2>PROGRESSIVE JACKPOT</h2>
-                <h1>$7,136,914.04</h1>
+                <h1 class="progressive_jackpot">$7,136,114</h1>
             </div>
         </section>
     </main>

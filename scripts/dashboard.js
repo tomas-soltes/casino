@@ -175,5 +175,16 @@ function goNextStep() {
   }
 }
 
+let jackpot = 114;
+addJackpot();
+function addJackpot() {
+  jackpot = jackpot + 4;
+    console.log(jackpot);
+    document.querySelector('.progressive_jackpot').textContent = "$7,136," + jackpot;
+    setTimeout(function () {
+      addJackpot();
+    }, 1000);
+}
+
 
 
