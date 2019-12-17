@@ -153,8 +153,9 @@ function removeAll() {
   });
 }
 
-window.addEventListener("click", goNextStep);
-window.addEventListener('touchmove', goNextStep, {passive: false});
+document.addEventListener("click", goNextStep);
+document.addEventListener('touchmove', goNextStep);
+document.addEventListener('touchstart', goNextStep);
 
 function goNextStep() {
   let myAccountActive = document.querySelector("body").classList.contains('onboarding--myAccount');

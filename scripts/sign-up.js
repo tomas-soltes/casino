@@ -361,10 +361,6 @@ function openSignUpForm() {
     document.querySelector(".signUp").style.opacity = "1";
 }
 
-//SPINNING WHEEL
-setTimeout(function () {
-    openSpinningWheel();
-}, 800);
 
 /* document.getElementById("spinBtn").addEventListener("click", spinWheel); */
 document.getElementById("closeSpinningWheel").addEventListener("click", closeSpinningWheel);
@@ -442,5 +438,15 @@ function addJackpot() {
     setTimeout(function () {
       addJackpot();
     }, 1000);
+}
+
+function enterSite(){
+    document.querySelector('.school_project').style.visibility = "hidden";
+    document.querySelector('.school_project').style.opacity = "0";
+
+setTimeout(function () {
+    openSpinningWheel();
+    document.querySelector('.school_project').style.display = "none";
+}, 800);
 }
 

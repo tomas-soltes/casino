@@ -42,7 +42,6 @@ u {
 
 button,
 select,
-input,
 li,
 a,
 label {
@@ -388,6 +387,58 @@ b {
   z-index: -1; }
   .filter--spin {
     background-color: rgba(0, 0, 0, 0.952); }
+
+.school_project {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.952);
+  z-index: 999;
+  transition: all .5s ease-in-out; }
+  .school_project div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-items: center; }
+    @media (max-width: 769px) {
+      .school_project div {
+        width: 80%; } }
+    .school_project div h2 {
+      padding: 4% 0;
+      text-align: center;
+      font-size: 40px;
+      color: var(--primary-color); }
+      @media (max-width: 769px) {
+        .school_project div h2 {
+          font-size: 25px; } }
+    .school_project div p {
+      padding: 3% 0;
+      text-align: center;
+      width: 80%;
+      font-size: 20px;
+      font-weight: 400; }
+      @media (max-width: 769px) {
+        .school_project div p {
+          padding: 6% 0;
+          font-size: 15px;
+          width: 80%; } }
+    .school_project div button {
+      margin: 5% auto;
+      padding: 2% 4%;
+      font-size: 26px;
+      text-align: center; }
+      @media (max-width: 769px) {
+        .school_project div button {
+          margin: 15% auto;
+          padding: 3% 8%;
+          font-size: 18px; } }
 
 .signUp,
 .signInForgot {
