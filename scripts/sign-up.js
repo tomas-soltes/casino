@@ -386,7 +386,7 @@ function spinWheel() {
             document.querySelector(".won").textContent = "$" + win;
             document.querySelector(".email-spin-fill").value = document.querySelector(".email-spin").value;
 
-            var mqTablet = window.matchMedia("(max-width: 769px)");
+            let mqTablet = window.matchMedia("(max-width: 769px)");
             if (mqTablet.matches) {
                 document.querySelector(".wheel_img").style.display = "none";
             }

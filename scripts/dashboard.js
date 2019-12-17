@@ -154,9 +154,9 @@ function removeAll() {
 }
 
 document.addEventListener("click", goNextStep);
-document.addEventListener('touchmove', goNextStep);
+/* document.addEventListener('touchmove', goNextStep);
 document.addEventListener('touchstart', goNextStep);
-
+ */
 function goNextStep() {
   let myAccountActive = document.querySelector("body").classList.contains('onboarding--myAccount');
   let myBalanceActive = document.querySelector("body").classList.contains('onboarding--myBalance');
