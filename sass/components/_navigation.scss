@@ -10,7 +10,7 @@
     font-size: 17px;
     background-color: var(--background-color);
     z-index: 10;
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 
     &.landing {
         grid-template-columns: 10% 50%;
@@ -175,16 +175,14 @@
         }
 
         a {
-            padding: 3%;
-
-            @include small-desktop {
-                padding: 4% 1%;
-            }
+            display: grid;
+            align-items: center;
         }
 
         li {
+            margin: auto;
             text-align: center;
-            padding: 3%;
+            padding: 15px 20px;
             font-family: 'Droid-serif', serif;
             text-transform: uppercase;
             font-weight: 400;
@@ -202,8 +200,9 @@
     &__account {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
+
         @include tablet {
-        justify-items: end;
+            justify-items: end;
         }
 
 
@@ -232,7 +231,7 @@
                 }
             }
 
-            p.colorGold{
+            p.colorGold {
                 color: var(--primary-color);
             }
         }

@@ -57,7 +57,7 @@ let addMoney_form, addMoney_button;
 
 document.querySelectorAll('.addMoneyModal__box__cards--card').forEach(input => {
   input.addEventListener('click', function (event) {
-    newBalance = Number(event.target.getAttribute('value'));
+    newBalance = Number(event.target.getAttribute('value'));    
     addMoney_form = document.querySelector('.step_box_1');
     addMoney_button = document.querySelector('.step_box_button_1');
     document.querySelector('.thankYouBox__text').textContent="You've added " + newBalance + "$";

@@ -21,7 +21,8 @@
 
 /* * {
     border: 1px solid green;
-} */
+}
+ */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
@@ -1739,13 +1740,12 @@ b {
         transition: all .4s ease-in-out;
         transform: translateX(-100%); } }
     .nav__menu a {
-      padding: 3%; }
-      @media (max-width: 1100px) {
-        .nav__menu a {
-          padding: 4% 1%; } }
+      display: grid;
+      align-items: center; }
     .nav__menu li {
+      margin: auto;
       text-align: center;
-      padding: 3%;
+      padding: 15px 20px;
       font-family: 'Droid-serif', serif;
       text-transform: uppercase;
       font-weight: 400;
