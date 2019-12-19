@@ -1,5 +1,10 @@
-let bets = [];
-let credit = 1000;
+
+
+function init() {
+    let bets = [];
+    let credit = parseInt(document.querySelector('.balance-amount').textContent,10);
+
+
 let onTable = 0;
 let wPayouts = {
     odd: 2,
@@ -16,8 +21,6 @@ let wPayouts = {
     thirdCol: 3
 }
 let totalWin;
-
-function init() {
     //SETS UP ALL THE EVENT LISTENERS ON BETS
     deckSetup();
 
@@ -36,11 +39,11 @@ function init() {
             document.querySelector(".ball-container").innerHTML = text;
 
         });
-}
+
 
 
 function creditUpdate(operation, amount) {
-
+    console.log(credit);
     if (operation == "plus") {
         credit += amount;
         totalWin += amount;
@@ -53,6 +56,8 @@ function creditUpdate(operation, amount) {
     }
     document.querySelector(".balance-amount").textContent = credit + " €";
     document.querySelector(".balance-table-amount").textContent = onTable + " €";
+    loggedUser.balance = credit;
+    updateDB(loggedUser);
 
 }
 
@@ -406,11 +411,14 @@ function findChip() {
     return selectedAmountObj;
 }
 
-init();
-
 
 const Bet = {
 
     number: "",
     amount: ""
 }
+
+
+}
+
+

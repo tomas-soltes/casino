@@ -86,6 +86,7 @@ function writeUserInfo(userArr) {
 
   //Add Balance
   document.querySelector('.addMoney p').textContent = loggedUser.balance + "$";
+  document.querySelector('.balance-amount').textContent = loggedUser.balance;
   document.querySelector('.loading').classList.add('hide');
   document.getElementById('card_name').value = loggedUser.fname + " " + loggedUser.lname;
 

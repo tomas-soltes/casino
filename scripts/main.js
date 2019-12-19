@@ -39,11 +39,13 @@ function goBackToStep2() {
 function openGame(){
   document.querySelector('.game-container').style.visibility = "visible";
   document.querySelector('.game-container').style.opacity = "1";
+  init();
 }
 
 function closeGame(){
   document.querySelector('.game-container').style.visibility = "hidden";
   document.querySelector('.game-container').style.opacity = "0";
+  location.reload();
 }
 
 
@@ -95,13 +97,12 @@ function changeSubmitButton(form, button) {
 function finishBalance() {
   document.querySelector('.addMoneyModal__box').classList.add('step4');
   loggedUser.balance = loggedUser.balance + newBalance;
-  console.log(loggedUser.balance);
+  console.log("toto je" + loggedUser.balance);
   updateDB(loggedUser);
   setTimeout(function () {
     location.reload();
   }, 800);
 }
-
 
 /*****************  Height check  ******************/
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit

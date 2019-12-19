@@ -23,8 +23,8 @@
 
 .deck-container {
   position: absolute;
-  width: 70%;
-  right: 100px;
+  width: 60%;
+  right: 200px;
   top: 5%;
 }
 
@@ -75,13 +75,13 @@
 .button-container {
   position: absolute;
   bottom: 10%;
-  right: 10%;
+  right: 200px;
 
 }
 
 .chip-container {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: 32%;
   width: 23%;
   overflow: auto;
@@ -343,7 +343,7 @@ width:100%;
   text-align: center;
 }
 
-@media screen and (max-device-width: 800px) and (orientation : portrait) {
+@media screen and (max-device-width: 1200px) and (orientation : portrait) {
   .mobile-overlay {
     display: block;
     position: absolute;
@@ -379,11 +379,3 @@ width:100%;
   }
 
 }
-
-
-/* @media screen and (max-device-width: 900px) and (orientation : landscape) {
-  .machine-container{
-    
-    transform: scale(0.6) translate(-20%,40%);
-  }
-} */

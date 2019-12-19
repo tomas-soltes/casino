@@ -32,7 +32,8 @@ body {
   background-color: var(--background-color);
   scroll-behavior: smooth;
   color: var(--font-color);
-  overflow: auto; }
+  overflow: auto;
+overflow-x:hidden; }
 
 ul {
   list-style: none;
